@@ -1,0 +1,159 @@
+$color-primary: #feb633;
+
+.navContainer {
+  z-index: 200;
+  background: #fff;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: 990px) {
+    padding: 0 4rem;
+    height: 7rem;
+  }
+  .logoContainer {
+    margin-left: 1rem;
+    display: block;
+    height: 100%;
+    .logoImage {
+      display: block;
+      height: 5rem;
+      @media (min-width: 990px) {
+        height: 7rem;
+      }
+    }
+  }
+
+  .burgerIcon {
+    outline: none;
+    position: relative;
+    margin-right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    @media (min-width: 990px) {
+      display: none;
+    }
+
+    .line {
+      width: 1.5rem;
+      height: 2px;
+      background-color: gray;
+      margin: 0.3rem 0.3rem;
+      transform-origin: center;
+    }
+    &:hover {
+      .line {
+        background-color: $color-primary;
+      }
+    }
+  }
+}
+
+.up.extend {
+  position: absolute;
+  transform: rotate(45deg);
+  top: 0.6rem;
+  right: -0.3rem;
+}
+
+.down.extend {
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 0.6rem;
+  right: -0.3rem;
+}
+
+.middle.extend {
+  transform: scaleX(0);
+}
+
+.scroll {
+  box-shadow: 0 0.1rem 1rem rgb(206, 206, 206);
+}
+
+.navigation {
+  background-color: #fff;
+  transform: scaleY(0);
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+
+  @media (min-width: 990px) {
+    padding: 0 4rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    transform: scaleY(1);
+    top: 0;
+    position: fixed;
+    background-color: transparent;
+  }
+  .navItem {
+    position: relative;
+    //width: 100%;
+    margin: 0 1rem;
+    align-self: center;
+    font-size: 1.2rem;
+
+    a {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      color: gray;
+      font-weight: 700;
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        height: 0.1rem;
+        width: 0;
+        background-color: $color-primary;
+        transition: 0.2s ease-in-out;
+      }
+      &:hover {
+        &:before {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+.navigation.extend {
+  padding-top: 3rem;
+  width: 100vw;
+  transform: scaleY(1);
+  transform-origin: top;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  //flex-wrap: wrap;
+  .navItem {
+    margin: 0 auto 2rem auto;
+    a {
+      visibility: 1;
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+.activeLink {
+  color: $color-primary;
+}

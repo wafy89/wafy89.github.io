@@ -1,0 +1,48 @@
+.portfolioContainer{
+    max-width: 90vw;
+    margin:  2rem;
+    padding: 2rem 0;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (min-width: 990px) {
+        padding: 0 4rem;
+    }
+    .projects{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .project{
+            
+            width:30rem ;
+            height: 17rem;
+            margin: 2rem 0;
+            border-radius: .5rem;
+            @media (min-width: 990px) {
+                width: 40rem;
+                height: 22.6666666666667;
+            }
+        }
+
+    }
+}
+
+.yellow{
+    background:linear-gradient(0deg, rgba(254, 182, 51, 0.8), rgba(254, 182, 51, 0.8)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU);
+
+}
+.pink{
+    background:linear-gradient(0deg, rgba(250, 34, 117, 0.8), rgba(250, 34, 117, 0.8)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU);
+
+}
+
+.blue{
+    background:linear-gradient(0deg, rgba(56, 34, 250, 0.8), rgba(56, 34, 250, 0.8)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU);
+}
+.green{
+    background:linear-gradient(0deg, rgba(25, 133, 4, 0.8), rgba(25, 133, 4, 0.8)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU);
+   
+}

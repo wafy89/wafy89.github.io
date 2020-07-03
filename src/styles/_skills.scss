@@ -1,0 +1,84 @@
+$color-primary: #feb633;
+
+.skillsContainer{
+    max-width: 90vw;
+    margin: 5rem 2rem;
+    padding: 0;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @media (min-width: 990px) {
+        padding: 0 4rem;
+    }
+
+}
+
+
+.graphic{
+
+    width: 100%;
+    max-width:40rem;
+    background-color:  #666;
+
+    .graphic-bg{
+        
+        //background-color:  #666;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 2rem;
+        .graphic-skill{
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            height: 100%;
+            .skill-level{
+                border: 32333c .1rem solid;
+              /*   position: relative; */
+                height: 98%;
+                align-self:center ;
+                padding-left:  .5rem ;
+                background-color:#32333c;
+                width: 6rem;
+                color:white;
+            }
+            .skill-level-fill{
+                margin: auto 0;
+                
+                
+ /*                position: absolute  ;
+                top:0;
+                left:0;  */
+                background-color: $color-primary;
+                
+                height: 1.8rem;
+            } 
+        }
+        .skill-level-number{}
+    }
+}
+
+.CSS{
+    width:67% ;
+}
+.HTML{
+    width:72% ;
+}
+.JavaScript{
+    width:74% ;
+}
+.React{
+    width:72% ;
+}
+.Node-js{
+    width:40% ;
+}
+.Express{
+    width:55% ;
+}
+.Mongoose{
+    width:55% ;
+}
