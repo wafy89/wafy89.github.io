@@ -12,7 +12,9 @@ class About extends Component {
             <h2>I’m Wafi</h2>
             <h4>Junior front-end web developer</h4>
             <Bounce>
-              <button className="hireMeBTN">Hire Me</button>
+              <a href="#contact">
+                <button className="hireMeBTN">Hire Me</button>
+              </a>
             </Bounce>
           </div>
         </Fade>

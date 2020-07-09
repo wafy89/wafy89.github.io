@@ -12,7 +12,7 @@ class NavBar extends Component {
       scrolling: false,
     };
     this.handleScroll = this.handleScroll.bind(this);
-  /*   this.updateSize = this.updateSize.bind(this); */
+    /*   this.updateSize = this.updateSize.bind(this); */
   }
   handleScroll() {
     if (window.scrollY === 0 && this.state.scrolling === true) {
@@ -21,7 +21,7 @@ class NavBar extends Component {
       this.setState({ scrolling: true });
     }
   }
-/*   updateSize(){
+  /*   updateSize(){
     if (window.innerWidth> 990 )this.setState({extend: true,})
   } */
   componentDidMount() {
@@ -31,13 +31,14 @@ class NavBar extends Component {
   render() {
     return (
       <nav
-        id="navbar-example2"
         className={
           this.state.scrolling ? "navContainer scroll" : "navContainer"
         }
       >
         <div className="logoContainer">
-          <img className="logoImage" src={logo} alt="logo" />
+          <a href="#home">
+            <img className="logoImage" src={logo} alt="logo" />
+          </a>
         </div>
         <div className={this.state.extend ? "navigation extend" : "navigation"}>
           <div
