@@ -21,20 +21,18 @@ body * {
   font-family: "Poppins", sans-serif;
 }
 
-
-
-.pageTitle{
+.pageTitle {
   //width: 10rem;
   position: relative;
   font-size: 2.8rem;
-  margin: 0 auto 2rem auto ;
-  &:before{
-      margin: -.3rem 20%;
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 60%;
-      height: .3rem;
-      background-color: $color-primary;
+  margin: 0 auto 2rem auto;
+  &:before {
+    margin: -0.3rem 20%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 0.3rem;
+    background-color: $color-primary;
   }
 }
