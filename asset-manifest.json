@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5be49278.chunk.css",
+    "main.js": "/static/js/main.021513d6.chunk.js",
+    "main.js.map": "/static/js/main.021513d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
+    "static/js/2.6cd27c6c.chunk.js": "/static/js/2.6cd27c6c.chunk.js",
+    "static/js/2.6cd27c6c.chunk.js.map": "/static/js/2.6cd27c6c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3cff3a8da903f2847eb79ad0af433d9f.js": "/precache-manifest.3cff3a8da903f2847eb79ad0af433d9f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5be49278.chunk.css.map": "/static/css/main.5be49278.chunk.css.map",
+    "static/js/2.6cd27c6c.chunk.js.LICENSE.txt": "/static/js/2.6cd27c6c.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/static/media/movie.96bd029f.png",
+    "static/media/wafi1.jpg": "/static/media/wafi1.6fae6d6d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19ccc7f6.js",
+    "static/js/2.6cd27c6c.chunk.js",
+    "static/css/main.5be49278.chunk.css",
+    "static/js/main.021513d6.chunk.js"
+  ]
+}
