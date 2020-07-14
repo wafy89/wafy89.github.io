@@ -10,8 +10,8 @@ export class Skills extends Component {
     }
     render() {
         return (
-            <div className="skillsContainer" id="skills">
-                <div className="pageTitle">SKILLS</div>
+            <div className="skillsContainer" id="skills" >
+                <div className="pageTitle" >SKILLS</div>
                 <div className="graphic">
               {this.state.skills.map(item => <Skill skill={item.skillName} key={item.skillName} level={item.level} />)}
                 </div>

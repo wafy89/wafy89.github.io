@@ -17,52 +17,73 @@ $color-primary: #feb633;
 
 
 .graphic{
-
+    padding : .1rem;
     width: 100%;
-    max-width:40rem;
+  //  max-width:50rem;
     background-color:  #666;
-
+    border: $color-primary 1rem solid;
+    border-radius: .5rem;
     .graphic-bg{
-        
+        position: relative;   
         //background-color:  #666;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 2rem;
+        height: 3rem;
+        margin: .2rem auto;
         .graphic-skill{
             flex-grow: 1;
             display: flex;
             justify-content: flex-start;
             align-items: stretch;
             height: 100%;
+                   
             .skill-level{
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
                 border: 32333c .1rem solid;
-              /*   position: relative; */
                 height: 98%;
-                align-self:center ;
                 padding-left:  .5rem ;
                 background-color:#32333c;
                 width: 6rem;
                 color:white;
+               
             }
-            .skill-level-fill{
-                margin: auto 0;
+            .skill-level-fill{    
+                
+                margin: 0rem;
+                margin-left: 0;
+                display: flex;
+                justify-content: flex-start;
+                align-items: stretch;
+                background: linear-gradient(45deg, (#262627), $color-primary) ;
+                height: 97%;
+
                 
                 
- /*                position: absolute  ;
-                top:0;
-                left:0;  */
-                background-color: $color-primary;
-                
-                height: 1.8rem;
             } 
         }
-        .skill-level-number{}
+        .skill-level-number{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 3rem;
+            position: absolute;
+            top: 0rem;
+            right: 0;
+            color: white;
+            background-color:#1e1f22;
+            
+            //background: #000;
+        }
     }
 }
 
 .CSS{
-    width:67% ;
+ width:67% ;
 }
 .HTML{
     width:72% ;
