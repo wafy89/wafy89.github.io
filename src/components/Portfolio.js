@@ -11,7 +11,7 @@ export class Portfolio extends Component {
           <a
             className="link"
             target="_blank"
-            href="https://affectionate-austin-c1fbbc.netlify.app/?fbclid=IwAR2I0j4xA7dch6ZRCJ5OpdntEMnhjS7T77G5GTZDQYD-YRkK_iQpcDr3w2M"
+            href="https://affectionate-austin-c1fbbc.netlify.app/"
           >
             <Fade left>
               <div className=" project blue">
@@ -26,7 +26,7 @@ export class Portfolio extends Component {
           <a
             className="link"
             target="_blank"
-            href="https://5f0c63aa82c1432f1483b32b--laughing-bartik-3997d8.netlify.app/"
+            href="https://laughing-bartik-3997d8.netlify.app/"
           >
             <Fade right>
               <div className=" project pink">
