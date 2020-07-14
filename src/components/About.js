@@ -3,9 +3,9 @@ import Fade from "react-reveal/Fade";
 class About extends Component {
   render() {
     return(
-     <div className="aboutContainer" id="about">
+     <div className="aboutContainer" >
        <Fade bottom>
-       <h1 className="pageTitle">ABOUT ME</h1></Fade>
+       <h1 className="pageTitle" id="about">ABOUT ME</h1></Fade>
       <div className="aboutText">
         <Fade left>
         <div className="aboutTextSection">
