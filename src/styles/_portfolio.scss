@@ -1,6 +1,6 @@
 .portfolioContainer {
-  max-width: 90vw;
-  margin: 2rem;
+  width: 100%;
+
   padding: 2rem 0;
   min-height: 90vh;
   display: flex;
@@ -9,7 +9,10 @@
   justify-content: space-evenly;
   @media (min-width: 990px) {
     padding: 0 4rem;
+    max-width: 90vw;
+  margin: 2rem;
   }
+  
   .projects {
     display: flex;
     justify-content: space-evenly;
@@ -19,7 +22,7 @@
       text-decoration: none;
       transition: 0.2s ease-in-out;
       text-decoration: none;
-      width: 30rem;
+      width: 20rem;
       height: 17rem;
       margin: 2rem 0;
       border-radius: 0.5rem;
