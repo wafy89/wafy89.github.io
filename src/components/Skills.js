@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Fade from "react-reveal/Fade";
 import Skill from './Skill';
 export class Skills extends Component {
     constructor(props){
@@ -11,7 +11,9 @@ export class Skills extends Component {
     render() {
         return (
             <div className="skillsContainer" id="skills" >
-                <div className="pageTitle" >SKILLS</div>
+                 <Fade bottom >
+           <div className="pageTitleContainer">
+                <div className="pageTitle" >SKILLS</div></div></Fade>
                 <div className="graphic">
               {this.state.skills.map(item => <Skill skill={item.skillName} key={item.skillName} level={item.level} />)}
                 </div>

@@ -4,7 +4,7 @@ $color-primary: #feb633;
     max-width: 90vw;
     margin: 5rem auto;
     padding: 0;
-    min-height: 60vh;
+    //min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,31 +12,42 @@ $color-primary: #feb633;
     @media (min-width: 990px) {
         padding: 0 4rem;
     }
-
+    .pageTitleContainer{
+        margin-bottom: 15rem;
+        @media (min-width:990px) {
+            margin-bottom: auto;
+        }
+    }
 }
 
 
 .graphic{
     transform: rotate(-90deg);
-    padding : .1rem;
+    padding : .1rem auto;
     //width: 90%;
+    //padding: auto;
     width:40rem;
-    margin: 9rem 0;
+    //margin: 9rem 0;
   //  max-width:50rem;
     background-color:  #666;
     border: $color-primary 1rem solid;
     border-radius: .5rem;
+    height: 85vw;
+
     @media (min-width:990px) {
         transform: rotate(0);
         margin:  0;
+        width:90%;
+        height: auto;
     }
     .graphic-bg{
+       
         position: relative;   
         //background-color:  #666;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 3rem;
+        height: 2.5rem;
         margin: .2rem auto;
         .graphic-skill{
             flex-grow: 1;
@@ -110,3 +121,8 @@ $color-primary: #feb633;
 .Mongoose{
     width:55% ;
 }
+
+
+
+
+

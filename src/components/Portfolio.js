@@ -6,7 +6,9 @@ export class Portfolio extends Component {
   render() {
     return (
       <div className="portfolioContainer" id="portfolio">
-        <div className="pageTitle" >Portfolio</div>
+         <Fade bottom >
+           <div className="pageTitleContainer">
+        <div className="pageTitle" >Portfolio</div></div></Fade>
         <div className="projects">
           <a
             className="link"
@@ -50,6 +52,7 @@ export class Portfolio extends Component {
               </div>
             </Fade>
           </a>
+          
           <a
             className="link"
             target="_blank"
@@ -59,6 +62,20 @@ export class Portfolio extends Component {
               <div className=" project green">
                 <h3 className="projectTitle"> HTML-CSS-PORTFOLIO</h3>
                 <h5 className="projectDescription"> Technologies used:HTML5 , Sass  </h5>
+              </div>
+            </Fade>
+          </a>
+          <a
+            className="link"
+            target="_blank"
+            href="https://github.com/wafy89/Todo-API"
+          >
+            <Fade left>
+              <div className=" project grey">
+                <h3 className="projectTitle"> Todo API </h3>
+                <h5 className="projectDescription"> an Express Server for a Todo-APP <br/>
+                Technologies used: express , Mongoose, JWT Token.
+                 </h5>
               </div>
             </Fade>
           </a>

@@ -19,14 +19,25 @@ body * {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-} 
 
+} 
+.pageTitleContainer{
+  height: 15rem;
+  width: 100%;
+  background-image: url("./assists/about_shap_bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 .pageTitle {
-  //width: 10rem;
+
   position: relative;
   font-size: 2.8rem;
-  margin: 0 auto 2rem auto;
+  
+  
   &:before {
     margin: -0.3rem 20%;
     content: "";
@@ -37,3 +48,5 @@ body * {
     background-color: $color-primary;
   }
 }
+}
+

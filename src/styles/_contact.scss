@@ -30,12 +30,14 @@ $color-primary: rgb(254, 182, 51);
             justify-content: center;
             align-items: stretch;
             input{
-                background-color: none;
+                background-color: white;
                 height: 2rem;
                 outline-color: $color-primary;
             }
             textarea{
                 height: 6rem;
+                background-color: white;
+
             }
         }
         .sendBTNField{

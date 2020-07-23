@@ -13,6 +13,17 @@ $color-primary: #feb633;
   @media (min-width: 684px) {
     flex-direction: row;
   }
+  .homeImage{
+    max-width:80vw ;
+    border: 1rem solid $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+      display: block;
+    }
+  }
   .homeTextContainer {
     margin-bottom: 5rem;
     h2 {

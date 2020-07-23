@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Fade from "react-reveal/Fade";
 export class Contact extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +12,9 @@ export class Contact extends Component {
         const { status } = this.state;
         return (
             <div className="contactContainer">
-                <div className="pageTitle" id="contact">Contact Me</div>
+               <Fade bottom >
+                 <div className="pageTitleContainer">
+                <div className="pageTitle" id="contact">Contact Me</div></div></Fade>
                 <form  onSubmit={this.submitForm}
         action="https://formspree.io/mbjzzlwz"
         method="POST" className="formContainer">
