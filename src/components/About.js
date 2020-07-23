@@ -4,8 +4,9 @@ class About extends Component {
   render() {
     return(
      <div className="aboutContainer" >
-       <Fade bottom>
-       <h1 className="pageTitle" id="about">ABOUT ME</h1></Fade>
+       <Fade bottom >
+         <div className="pageTitleContainer">
+       <div className="pageTitle" id="about">ABOUT ME</div></div></Fade>
       <div className="aboutText">
         <Fade left>
         <div className="aboutTextSection">

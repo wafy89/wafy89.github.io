@@ -1,6 +1,7 @@
 $color-primary: #feb633;
 
 .homeContainer {
+  width:100%;
   max-width: 90vw;
   margin: 5rem 2rem;
   padding: 2rem 0;
@@ -11,6 +12,17 @@ $color-primary: #feb633;
   justify-content: space-evenly;
   @media (min-width: 684px) {
     flex-direction: row;
+  }
+  .homeImage{
+    max-width:80vw ;
+    border: 1rem solid $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+      display: block;
+    }
   }
   .homeTextContainer {
     margin-bottom: 5rem;

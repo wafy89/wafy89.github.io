@@ -13,11 +13,12 @@ export class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <div className="appContainer">
         <Home />
         <About/>
         <Skills/>
         <Portfolio />
-        <Contact/>
+        <Contact/></div>
         <Footer/>
       </div>
     );
