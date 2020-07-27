@@ -16,20 +16,19 @@ class About extends Component {
             <div className="aboutTextSection">
               <h2>Who's this guy?</h2>
               <h4>
-                I'm Wafi Amer, 31 year old and coming from Syria. I live in
-                Leipzig, Germany since 2017. I can speak English, relatively
-                good German and Arabic. If I'm not coding I like to spend my
-                time playing or listening music, watching football matches or
-                going outside if the weather is nice.
+                I am Wafi Amer, 31 year old and coming from Syria. I live in
+                Leipzig, Germany since 2017. I speak Arabic, English, and German. If I'm not coding I spend my
+                time playing Oud or listening to music, watching football or
+                going outside, if the weather is nice.
               </h4>
             </div>
           </Fade>
 
           <Fade right>
             <div className="aboutTextSection">
-              <h2>What is my web development experiences?</h2>
+              <h2>What is my web development experience?</h2>
               <h4>
-                I'm junior Front-End Web-Developer, I have just finished a
+                I'm a junior Front-End Web-Developer. I just finished a
                 web-development course in{" "}
                 <a
                   className="aboutLinks"
@@ -42,7 +41,7 @@ class About extends Component {
                 innovation. During the course I was the class tutor, helping my
                 classmates to understand our subjects. This also helped me to
                 improve my understanding, since explaining our exercises and
-                lessons to my classmates has also improved my experience.{" "}
+                lessons to my classmates has also improved my experience.
                 <a className="aboutLinks" href="#contact">
                   {" "}
                   Let's make something special.
@@ -55,21 +54,18 @@ class About extends Component {
             <div className="aboutTextSection">
               <h2>How I've chosen this work field?</h2>
               <h4>
-                2009-2012 I studied in Syria High{" "}
+                2009-2012 I studied   
                 <a
                   className="aboutLinks"
                   href="https://www.svuonline.org/en/program/hnd"
-                >
-                  {" "}
-                  National Diploma in Computing and Business Application{" "}
-                </a>{" "}
-                at Syrian-Virtual-University. this program was business focused
+                >{" "}            
+                  Higher National Diploma in Computing and Business Application
+                  {" "} </a>
+                at Syrian-Virtual-University. This program was business focused
                 but it also contained web-development at the basic level. I
-                liked this field but I did't get the chance to work since this
-                field was very new in syria and no chances were available. but
-                when I came to germany I looked for such courses and luckily I
-                found a good One and I was all the Time interested of its
-                content.
+                liked this work field but I did't get the chance to work since Web development was very new in syria and no vacancies were available. But
+                when I came to germany I started looking for such courses and luckily I
+                found a good one, that its content is exactly what I was looking for.
               </h4>
             </div>
           </Fade>
