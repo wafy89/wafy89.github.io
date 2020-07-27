@@ -106,7 +106,7 @@ class NavBar extends Component {
             onClick={() =>
               this.setState({ activeLink: "contact", extend: false })
             }
-            className="navItem"
+            className="navItem contact"
           >
             <AnchorLink href="#contact">
               <p

@@ -5,12 +5,10 @@ function Footer() {
     <div className="footerContainer">
       <h3>Contact info</h3>
       <div className="contactInfo">
-        <div phone>
-          <p>
-            Linkilstr. 35 <br /> 04159 Leipzig
-          </p>
-
-          <p> +49 1590 650 1550</p>
+        <div className="phone">
+          <p> +49 1590 650 1550 </p>
+          <p>Linkilstraße 35 </p>
+          <p> 04159 Leipzig</p>
         </div>
         <div className="websites">
           <p> wafi.amer.17@gmail.com</p>

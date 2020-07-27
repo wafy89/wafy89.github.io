@@ -5,19 +5,20 @@ $color-primary: #feb633;
   background: #fff;
   height: 5rem;
   position: fixed;
+  width: 100vw;
   top: 0;
   left: 0;
-  right: 0;
+  //right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media (min-width: 990px) {
-    padding: 0 4rem;
+    /* margin:  0 4rem; */
     height: 7rem;
-
+    //padding-right: 5rem;
   }
   .logoContainer {
-    margin-left: 1rem;
+    //margin-left: 1rem;
     display: block;
     height: 100%;
     .logoImage {
@@ -83,12 +84,12 @@ $color-primary: #feb633;
   transform: scaleY(0);
   position: absolute;
   top: 5rem;
-  right: 0;
+  right: 0rem;
   left: 0;
   overflow: hidden;
-  width: 100%;
+  //width: 100%;
   @media (min-width: 990px) {
-
+    //right: 5rem;
     height: 7rem;
     display: flex;
     flex-direction: row;
@@ -101,7 +102,7 @@ $color-primary: #feb633;
   .navItem {
     position: relative;
     //width: 100%;
-    margin: 0 1rem;
+    margin: 0 2rem;
     align-self: center;
     font-size: 1.2rem;
 
@@ -133,7 +134,7 @@ $color-primary: #feb633;
 }
 
 .navigation.extend {
- padding-top: 3rem;
+  padding-top: 3rem;
   //width: 100vw;
   transform: scaleY(1);
   transform-origin: top;
@@ -149,7 +150,7 @@ $color-primary: #feb633;
       visibility: 1;
       display: block;
       text-decoration: none;
-      width: 100%;
+      width: 90%;
       text-align: center;
       padding: 0;
     }
@@ -158,4 +159,8 @@ $color-primary: #feb633;
 
 .activeLink {
   color: $color-primary;
+}
+
+.navItem.contact {
+  margin-right: 5rem;
 }
