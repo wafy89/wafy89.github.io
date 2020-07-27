@@ -26,29 +26,38 @@ $color-primary: #feb633;
     padding : .1rem auto;
     //width: 90%;
     //padding: auto;
-    width:40rem;
+    width:80vh;
+    max-width: 1200px;
     //margin: 9rem 0;
   //  max-width:50rem;
     background-color:  #666;
-    border: $color-primary 1rem solid;
+    border: $color-primary .5rem solid;
     border-radius: .5rem;
-    height: 85vw;
-
-    @media (min-width:990px) {
+    height: 80vw;
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    @media (min-width:700px) {
         transform: rotate(0);
         margin:  0;
         width:90%;
-        height: auto;
+        height: 50vh;
+        padding: .5rem;
     }
     .graphic-bg{
-       
+        
+        width: 100%;
+       flex-grow: 1;
         position: relative;   
         //background-color:  #666;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 2.5rem;
+        height:12%;
         margin: .2rem auto;
+        background-color: rgb(75, 75, 75);
         .graphic-skill{
             flex-grow: 1;
             display: flex;
@@ -57,12 +66,13 @@ $color-primary: #feb633;
             height: 100%;
                    
             .skill-level{
+                
                 overflow: hidden;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 border: 32333c .1rem solid;
-                height: 98%;
+                height: 100%;
                 padding-left:  .5rem ;
                 background-color:#32333c;
                 width: 6rem;
@@ -70,14 +80,13 @@ $color-primary: #feb633;
                
             }
             .skill-level-fill{    
-                
                 margin: 0rem;
                 margin-left: 0;
                 display: flex;
                 justify-content: flex-start;
                 align-items: stretch;
                 background: linear-gradient(45deg, (#262627), $color-primary) ;
-                height: 97%;
+                //height: 100%;
 
                 
                 
@@ -93,7 +102,7 @@ $color-primary: #feb633;
             top: 0rem;
             right: 0;
             color: white;
-            background-color:#1e1f22;
+            background-color:rgb(75, 75, 75);
             
             //background: #000;
         }

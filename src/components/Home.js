@@ -7,7 +7,7 @@ class About extends Component {
   render() {
     return (
       <div className="homeContainer" id="home">
-         <Fade left >
+        <Fade left>
           <div className="homeTextContainer">
             <h2>I’m Wafi</h2>
             <h4>Junior front-end web developer</h4>

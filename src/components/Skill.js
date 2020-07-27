@@ -1,5 +1,5 @@
 import React from 'react'
-import Slide from 'react-reveal/Slide';
+
 function Skill(props) {
     return (
         <div className="graphic-bg">
