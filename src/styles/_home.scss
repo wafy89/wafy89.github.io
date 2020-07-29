@@ -2,16 +2,17 @@ $color-primary: #feb633;
 
 .homeContainer {
   width: 100%;
-  max-width: 80vw;
-  margin: 5rem 2rem;
+  //max-width:1500px;
+  margin: 5rem auto;
   padding: 0;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  @media (min-width: 684px) {
+  @media (min-width: 990px) {
     flex-direction: row;
+    //justify-content: center;
   }
   .homeImage {
     max-width: 88vw;

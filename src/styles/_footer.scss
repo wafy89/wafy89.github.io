@@ -46,9 +46,20 @@ $color-primary: #feb633;
     justify-content: space-evenly;
     align-items: center;
     @media (min-width: 990px) {
-      justify-content: space-evenly;
       align-items: center;
       flex-direction: row;
+    }
+    .phone{
+      width: 100%;
+      @media (min-width: 990px) {
+        width: 40%;
+      }
+    }
+    .websites{
+      width: 100%;
+      @media (min-width: 990px) {
+        width: 40%;
+      }
     }
   }
 }
