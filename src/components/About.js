@@ -17,9 +17,8 @@ class About extends Component {
               <h2>Who's this guy?</h2>
               <h4>
                 I am Wafi Amer, 31 year old and coming from Syria. I live in
-                Leipzig, Germany since 2017. I speak Arabic, English, and German. If I'm not coding I spend my
-                time playing Oud or listening to music, watching football or
-                going outside, if the weather is nice.
+                Leipzig, Germany since 2017. I speak Arabic, English, and German. I spend majority of my time in coding, playing music, watching football or
+                going outside, if the weather allows.
               </h4>
             </div>
           </Fade>
@@ -28,7 +27,7 @@ class About extends Component {
             <div className="aboutTextSection">
               <h2>What is my web development experience?</h2>
               <h4>
-                I'm a junior Front-End Web-Developer. I just finished a
+                I'm a junior Front-End Web-Developer. I have just finished my
                 web-development course in{" "}
                 <a
                   className="aboutLinks"
@@ -37,11 +36,9 @@ class About extends Component {
                 >
                   Digital Career Institute
                 </a>
-                . I always have been passionate about web-development and
-                innovation. During the course I was the class tutor, helping my
-                classmates to understand our subjects. This also helped me to
-                improve my understanding, since explaining our exercises and
-                lessons to my classmates has also improved my experience.
+                . I have always been passionate about web-development and
+                innovation. During the course I was the class tutor, help my
+                colleagues and clarify their concerns. And that also has significant positive impact on my skills and experience.
                 <a className="aboutLinks" href="#contact">
                   {" "}
                   Let's make something special.
@@ -63,8 +60,8 @@ class About extends Component {
                   {" "} </a>
                 at Syrian-Virtual-University. This program was business focused
                 but it also contained web-development at the basic level. I
-                liked this work field but I did't get the chance to work since Web development was very new in syria and no vacancies were available. But
-                when I came to germany I started looking for such courses and luckily I
+                liked this work field but I did't get the chance to work since Web development was very new in Syria. But
+                when I came Germany I have started to look for such courses and luckily I
                 found a good one, that its content is exactly what I was looking for.
               </h4>
             </div>
