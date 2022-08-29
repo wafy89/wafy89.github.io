@@ -1,6 +1,6 @@
 $color-primary: #feb633;
 
-.skillsContainer{
+.skillsContainer {
     max-width: 90vw;
     margin: 5rem auto;
     padding: 0;
@@ -9,11 +9,14 @@ $color-primary: #feb633;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+
     @media (min-width: 990px) {
         padding: 0 4rem;
     }
-    .pageTitleContainer{
+
+    .pageTitleContainer {
         margin-bottom: 15rem;
+
         @media (min-width:990px) {
             margin-bottom: auto;
         }
@@ -21,16 +24,16 @@ $color-primary: #feb633;
 }
 
 
-.graphic{
+.graphic {
     transform: rotate(-90deg);
-    padding : .1rem auto;
+    padding: .1rem auto;
     //width: 90%;
     //padding: auto;
-    width:80vh;
+    width: 80vh;
     max-width: 1200px;
     //margin: 9rem 0;
-  //  max-width:50rem;
-    background-color:  #666;
+    //  max-width:50rem;
+    background-color: #666;
     border: $color-primary .5rem solid;
     border-radius: .5rem;
     height: 80vw;
@@ -39,60 +42,65 @@ $color-primary: #feb633;
     //flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
+
     @media (min-width:700px) {
         transform: rotate(0);
-        margin:  0;
-        width:90%;
+        margin: 0;
+        width: 90%;
         height: 50vh;
         padding: .5rem;
     }
-    .graphic-bg{
-        
+
+    .graphic-bg {
+
         width: 100%;
-       flex-grow: 1;
-        position: relative;   
+        flex-grow: 1;
+        position: relative;
         //background-color:  #666;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height:12%;
+        height: 12%;
         margin: .2rem auto;
         background-color: rgb(75, 75, 75);
-        .graphic-skill{
+
+        .graphic-skill {
             flex-grow: 1;
             display: flex;
             justify-content: flex-start;
             align-items: stretch;
             height: 100%;
-                   
-            .skill-level{
-                
+
+            .skill-level {
+
                 overflow: hidden;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 border: 32333c .1rem solid;
                 height: 100%;
-                padding-left:  .5rem ;
-                background-color:#32333c;
+                padding-left: .5rem;
+                background-color: #32333c;
                 width: 6rem;
-                color:white;
-               
+                color: white;
+
             }
-            .skill-level-fill{    
+
+            .skill-level-fill {
                 margin: 0rem;
                 margin-left: 0;
                 display: flex;
                 justify-content: flex-start;
                 align-items: stretch;
-                background: linear-gradient(45deg, (#262627), $color-primary) ;
+                background: linear-gradient(45deg, (#262627), $color-primary);
                 //height: 100%;
 
-                
-                
-            } 
+
+
+            }
         }
-        .skill-level-number{
+
+        .skill-level-number {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -102,36 +110,41 @@ $color-primary: #feb633;
             top: 0rem;
             right: 0;
             color: white;
-            background-color:rgb(75, 75, 75);
-            
+            background-color: rgb(75, 75, 75);
+
             //background: #000;
         }
     }
 }
 
-.CSS{
- width:67% ;
-}
-.HTML{
-    width:72% ;
-}
-.JavaScript{
-    width:74% ;
-}
-.React{
-    width:72% ;
-}
-.Node-js{
-    width:40% ;
-}
-.Express{
-    width:55% ;
-}
-.Mongoose{
-    width:55% ;
+.CSS {
+    width: 67%;
 }
 
+.HTML {
+    width: 72%;
+}
 
+.JavaScript {
+    width: 74%;
+}
 
+.Vue {
+    width: 80%;
+}
 
+.React {
+    width: 72%;
+}
 
+.Node-js {
+    width: 40%;
+}
+
+.Express {
+    width: 40%;
+}
+
+.Mongoose {
+    width: 40%;
+}

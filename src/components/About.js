@@ -29,7 +29,7 @@ class About extends Component {
             <div className="aboutTextSection">
               <h2>What is my web development experiences?</h2>
               <h4>
-                I'm junior Front-End Web-Developer, I have just finished a
+                I'm Front-End Web-Developer with 2 years experiance as vue developer, before that I have done a
                 web-development course in{" "}
                 <a
                   className="aboutLinks"
@@ -39,14 +39,19 @@ class About extends Component {
                   Digital Career Institute
                 </a>
                 . I always have been passionate about web-development and
-                innovation. During the course I was the class tutor, helping my
+                innovation.
+                as Vue developer by <a
+                  className="aboutLinks"
+                  href="https://relaxdays.de/"
+                  target="	_blank"
+                >
+                  Relaxdays GmbH
+                </a> I was responsable to implement and maintain Vue js Project to deliver a best user experiance for my collagues in deferant departments to do thier daily work.
+                During the web-development course I was the class tutor, helping my
                 classmates to understand our subjects. This also helped me to
                 improve my understanding, since explaining our exercises and
-                lessons to my classmates has also improved my experience.{" "}
-                <a className="aboutLinks" href="#contact">
-                  {" "}
-                  Let's make something special.
-                </a>
+                lessons to my classmates has also improved my experience.
+
               </h4>
             </div>
           </Fade>

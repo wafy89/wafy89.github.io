@@ -9,10 +9,11 @@ export class Skills extends Component {
         { skillName: "CSS", level: 80 },
         { skillName: "HTML", level: 85 },
         { skillName: "JavaScript", level: 90 },
+        { skillName: "Vue", level: 95 },
         { skillName: "React", level: 85 },
         { skillName: "Node-js", level: 50 },
-        { skillName: "Express", level: 65 },
-        { skillName: "Mongoose", level: 65 },
+        { skillName: "Express", level: 50 },
+        { skillName: "Mongoose", level: 50 },
       ],
     };
   }
