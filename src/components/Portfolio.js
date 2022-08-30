@@ -14,7 +14,7 @@ export class Portfolio extends Component {
           <a
             className="link"
             target="_blank"
-            href="http://wafiamer.codes/MovieApp/"
+            href="http://wafiamer.com/MovieApp/"
           >
             <Fade left>
               <div className="project blue">
@@ -29,7 +29,7 @@ export class Portfolio extends Component {
           <a
             className="link"
             target="_blank"
-            href="https://wafiamer.codes/cocktail-master-app/"
+            href="https://wafiamer.com/cocktail-master-app/"
           >
             <Fade right>
               <div className=" project pink">
@@ -62,7 +62,7 @@ export class Portfolio extends Component {
           <a
             className="link"
             target="_blank"
-            href="https://wafiamer.codes/HTML-CSS-PORTFOLIO/"
+            href="https://wafiamer.com/HTML-CSS-PORTFOLIO/"
           >
             <Fade right>
               <div className=" project green">

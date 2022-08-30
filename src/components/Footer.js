@@ -13,7 +13,7 @@ function Footer() {
         <div className="websites">
           <p> wafi.amer.17@gmail.com</p>
           <p>
-            <a href="https://wafiamer.codes/">wafiamer.codes</a>
+            <a href="https://wafiamer.com">wafiamer.com</a>
           </p>
           <p>
             <a href="https://github.com/wafy89?tab=repositories">
