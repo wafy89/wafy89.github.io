@@ -8,7 +8,7 @@ export class Skills extends Component {
       skills: [
         { skillName: "CSS", level: 80 },
         { skillName: "HTML", level: 85 },
-        { skillName: "JavaScript", level: 90 },
+        { skillName: "JavaScript", level: 95 },
         { skillName: "Vue", level: 95 },
         { skillName: "React", level: 85 },
         { skillName: "Node-js", level: 50 },
