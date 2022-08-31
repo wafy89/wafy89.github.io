@@ -25,7 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build gh-pages -b master -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,5 +50,5 @@
     "sass-loader": "^13.0.2",
     "webpack": "^5.74.0"
   },
-  "homepage": "https://wafy89.github.io"
+  "homepage": "https://wafy89.github.io/"
 }
