@@ -1,4 +1,5 @@
 import logo from '../assists/logo4.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useState, useEffect } from 'react';
 import Hamburger from 'hamburger-react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
@@ -46,13 +47,13 @@ function Navbar() {
 					moonColor="white"
 				/>
 				<div className="h-full">
-					<a href="#home">
+					<AnchorLink href="#home">
 						<img
 							className="block h-full"
 							src={logo}
 							alt="logo"
 						/>
-					</a>
+					</AnchorLink>
 				</div>
 
 				<div className="flex justify-end items-center gap-2 h-full">
