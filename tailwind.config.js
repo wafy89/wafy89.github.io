@@ -8,6 +8,10 @@ module.exports = {
 				'primary-yellow': '#FAB632',
 				'primary-yellow-light': '#ffbf42',
 			},
+			backgroundImage: {
+				'header-bg': "url('./assists/about_shap_bg.png')",
+				'footer-texture': "url('/img/footer-texture.png')",
+			},
 		},
 	},
 	plugins: [],

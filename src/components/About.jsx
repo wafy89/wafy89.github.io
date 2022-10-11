@@ -2,20 +2,20 @@ import React from 'react';
 
 function About() {
 	return (
-		<div className="aboutContainer">
+		<div className="mx-auto max-w-7xl pt-16 " id="about">
 			<div className="pageTitleContainer">
 				<div
-					className="pageTitle"
-					id="about"
+					className="bg-header-bg bg-contain  text-slate-600  dark:text-white text-5xl h-32 flex justify-center items-center font-medium"
+					
 				>
 					ABOUT ME
 				</div>
 			</div>
 
-			<div className="aboutText">
-				<div className="aboutTextSection">
-					<h2>Who's this guy?</h2>
-					<h4>
+			<div className="px-4  text-slate-800  dark:text-white">
+				<div className="border-solid border-4 my-4 border-slate-400 dark:border-slate-800">
+					<h2 className='w-full bg-slate-400 dark:bg-slate-800 font-medium text-lg'>Who's this guy?</h2>
+					<h4 className='p-2'>
 						I'm Wafi Amer, 33 year old and coming from Syria. I live in Leipzig,
 						Germany since 2017. I can speak English, relatively good German and
 						Arabic. If I'm not coding I like to spend my time playing or
@@ -23,9 +23,9 @@ function About() {
 						weather is nice.
 					</h4>
 				</div>
-				<div className="aboutTextSection">
-					<h2>What is my web development experiences?</h2>
-					<h4>
+							<div className="border-solid border-4 border-slate-400 dark:border-slate-800">
+					<h2 className='w-full bg-slate-400 dark:bg-slate-800 font-medium text-lg'>What is my web development experiences?</h2>
+					<h4 className='p-2'>
 						I'm Front-End Web-Developer with 2 years experiance as vue
 						developer, before that I have done a web-development course in{' '}
 						<a
@@ -54,9 +54,9 @@ function About() {
 					</h4>
 				</div>
 
-				<div className="aboutTextSection">
-					<h2>How I've chosen this work field?</h2>
-					<h4>
+					<div className="border-solid border-4 my-4 border-slate-400 dark:border-slate-800">
+					<h2 className='w-full bg-slate-400 dark:bg-slate-800 font-medium text-lg'>How I've chosen this work field?</h2>
+					<h4 className='p-2'>
 						2009-2012 I studied in Syria High{' '}
 						<a
 							className="aboutLinks"

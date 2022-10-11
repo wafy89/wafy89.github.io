@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Skill from './Skill';
-export class Skills extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			skills: [
+
+
+
+function Skills() {
+	const skills= [
 				{ skillName: 'CSS', level: 80 },
 				{ skillName: 'HTML', level: 85 },
 				{ skillName: 'JavaScript', level: 95 },
@@ -13,12 +13,9 @@ export class Skills extends Component {
 				{ skillName: 'Node-js', level: 50 },
 				{ skillName: 'Express', level: 50 },
 				{ skillName: 'Mongoose', level: 50 },
-			],
-		};
-	}
-	render() {
-		return (
-			<div
+			]
+	return (
+	<div
 				className="skillsContainer"
 				id="skills"
 			>
@@ -26,7 +23,7 @@ export class Skills extends Component {
 					<div className="pageTitle">SKILLS</div>
 				</div>
 				<div className="graphic">
-					{this.state.skills.map((item) => (
+					{skills.map((item) => (
 						<Skill
 							skill={item.skillName}
 							key={item.skillName}
@@ -35,8 +32,8 @@ export class Skills extends Component {
 					))}
 				</div>
 			</div>
-		);
-	}
+	)
 }
 
-export default Skills;
+export default Skills
+
