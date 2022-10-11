@@ -1,10 +1,9 @@
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import logo from '../assists/logo4.png';
 import { useState, useEffect } from 'react';
 import Hamburger from 'hamburger-react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import MobileNavigation from './MobileNavigation.tsx';
-import NavItem from './NavItem.tsx';
+import MobileNavigation from './MobileNavigation';
+import NavItem from './NavItem.jsx';
 function Navbar() {
 	const [isDarkMode, setDarkMode] = useState(false);
 	useEffect(() => {
@@ -16,7 +15,6 @@ function Navbar() {
 	}, []);
 
 	useEffect(() => {
-		console.log({ isDarkMode });
 		if (isDarkMode) {
 			document.documentElement.classList.add('dark');
 		} else {
@@ -24,34 +22,19 @@ function Navbar() {
 		}
 	}, [isDarkMode]);
 
-	const toggleDarkMode = (checked) => {
-		setDarkMode(checked);
-	};
 	const [extend, setExtend] = useState(false);
 	const [activeLink, setActiveLink] = useState('');
-	//const [transform, setTransform] = useState(0);
-	//const [scrolling, setScrolling] = useState(false);
 
-	// const handleScroll = () => {
-	// 	if (window.scrollY === 0 && scrolling === true) {
-	// 		setScrolling(false);
-	// 	} else if (window.scrollY !== 0 && scrolling !== true) {
-	// 		setScrolling(true);
-	// 	}
-	// };
 	const navigationList = ['home', 'about', 'skills', 'portfolio', 'contact'];
+
 	const scrollTo = (to) => {
 		setActiveLink(to);
 		setExtend(false);
 	};
-	/*   updateSize(){
-    if (window.innerWidth> 990 )this.setState({extend: true,})
-  } */
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', handleScroll);
-	// 	/* window.addEventListener('resize', this.updateSize) */
-	// }, []);
 
+	const toggleDarkMode = (checked) => {
+		setDarkMode(checked);
+	};
 	return (
 		<>
 			<nav className="z-40 px-2  bg-white dark:bg-slate-800 h-14 fixed w-screen top-0 left-0 flex justify-between shadow-md ">
@@ -72,8 +55,8 @@ function Navbar() {
 					</a>
 				</div>
 
-				<div className="flex justify-end gap-2 h-full">
-					<div className="md:flex hidden justify-end gap-2 px-3 align-middle items-center h-full ">
+				<div className="flex justify-end items-center gap-2 h-full">
+					<div className="md:flex hidden justify-end gap-2 px-3 align-middle items-center  ">
 						{navigationList.map((item) => (
 							<NavItem
 								key={item}
@@ -92,6 +75,7 @@ function Navbar() {
 							toggled={extend}
 							toggle={setExtend}
 							color="#FAB632"
+							size={24}
 						/>
 					</div>
 				</div>
