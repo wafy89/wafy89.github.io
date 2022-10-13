@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import Skill from './Skill';
+import Power from './Skill';
 
 
 
 function Skills() {
 	const skills= [
 				{ skillName: 'CSS', level: 80 },
+				{ skillName: 'Remix JS', level: 50 },
 				{ skillName: 'HTML', level: 85 },
 				{ skillName: 'JavaScript', level: 95 },
 				{ skillName: 'Vue', level: 95 },
@@ -15,19 +15,21 @@ function Skills() {
 				{ skillName: 'Mongoose', level: 50 },
 			]
 	return (
-	<div
-				className="skillsContainer"
-				id="skills"
-			>
-				<div className="pageTitleContainer">
-					<div className="pageTitle">SKILLS</div>
+<div className="mx-auto max-w-7xl pt-16 " id="skills">
+			<div className="pageTitleContainer">
+				<div
+					className="bg-header-bg bg-contain  text-slate-600  dark:text-white text-5xl h-32 flex justify-center items-center font-medium"
+					
+				>
+					SKILLS
 				</div>
-				<div className="graphic">
+			</div>
+				<div className="flex justify-around flex-wrap">
 					{skills.map((item) => (
-						<Skill
-							skill={item.skillName}
-							key={item.skillName}
-							level={item.level}
+						<Power
+						
+							value={item.level}
+							label={item.skillName}
 						/>
 					))}
 				</div>
