@@ -21,7 +21,7 @@ function Portfolio() {
 				'netlify',
 			],
 			image: Football,
-			siteUrl: 'https://wafiamer.com/MovieApp/',
+			siteUrl: 'https://football-events-app.netlify.app/',
 		},
 		{
 			githubLink: 'https://github.com/wafy89/MovieApp',
