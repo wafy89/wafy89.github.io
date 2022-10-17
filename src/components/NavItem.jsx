@@ -8,12 +8,14 @@ function NavItem({ scrollTo, activeLink, to }) {
 	return (
 		<div
 			onClick={() => scrollTo(to)}
-			className={`transform flex justify-center items-center duration-200  h-10  hover:text-orange-400 ${
-				activeLink === to && 'text-primary-yellow font-semibold'
-			} slate-800 dark:text-white`}
+			className="text-lg "
 		>
 			<AnchorLink
-				className=""
+				className={` transition duration-300 focus:outline-none focus:text-primary-yellow focus:underline hover:underline hover:text-primary-yellow underline-offset-8 ${
+					activeLink === to
+						? 'text-primary-yellow underline font-extrabold'
+						: ' text-slate-900 dark:text-white'
+				}`}
 				href={'#' + to}
 			>
 				<p className="">{capitlize(to)}</p>

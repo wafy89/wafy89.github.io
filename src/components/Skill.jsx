@@ -63,7 +63,7 @@ export default function Power(props) {
           <circle className="fill-white" {...needle.base} r={4} />
         </g>
       </svg>
-			<h4 className=" text-slate-600  dark:text-white text-xl">{label}</h4>
+			<h4 className="bg-primary-yellow-light mt-1 drop-shadow-lg dark:bg-primary-yellow w-[184px] mx-auto rounded-b-xl text-slate-600  text-xl">{label}</h4>
     </div>
   );
 }

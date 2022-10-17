@@ -1,11 +1,11 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
-import Portfolio from './components/Portfolio';
-import About from './components/About.jsx';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import NavBar from './views/NavBar';
+import Home from './views/Home';
+import Portfolio from './views/Portfolio';
+import About from './views/About.jsx';
+import Skills from './views/Skills';
+import Contact from './views/Contact';
+import Footer from './views/Footer';
 
 function App() {
 	return (

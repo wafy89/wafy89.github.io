@@ -3,8 +3,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { useState, useEffect } from 'react';
 import Hamburger from 'hamburger-react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import MobileNavigation from './MobileNavigation';
-import NavItem from './NavItem.jsx';
+import MobileNavigation from '../components/MobileNavigation.jsx';
+import NavItem from '../components/NavItem.jsx';
 function Navbar() {
 	const [isDarkMode, setDarkMode] = useState(false);
 	useEffect(() => {
@@ -38,7 +38,7 @@ function Navbar() {
 	};
 	return (
 		<>
-			<nav className="z-40 px-2  bg-white dark:bg-slate-800 h-14 fixed w-screen top-0 left-0 flex justify-between shadow-md ">
+			<nav className="z-50 px-2  bg-white dark:bg-slate-800 h-14 fixed w-screen top-0 left-0 flex justify-between shadow-md ">
 				<DarkModeSwitch
 					checked={isDarkMode}
 					onChange={toggleDarkMode}
@@ -57,7 +57,7 @@ function Navbar() {
 				</div>
 
 				<div className="flex justify-end items-center gap-2 h-full">
-					<div className="md:flex hidden justify-end gap-2 px-3 align-middle items-center  ">
+					<div className="md:flex hidden justify-end gap-4 px-3 align-middle items-center  ">
 						{navigationList.map((item) => (
 							<NavItem
 								key={item}

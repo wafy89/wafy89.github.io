@@ -10,7 +10,10 @@ module.exports = {
 			},
 			backgroundImage: {
 				'header-bg': "url('./assists/about_shap_bg.png')",
-				'footer-texture': "url('/img/footer-texture.png')",
+				footer: "url('./assists/logo4.png')",
+			},
+			backgroundSize: {
+				80: '20rem',
 			},
 		},
 	},
