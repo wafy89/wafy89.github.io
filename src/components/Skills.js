@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import Skill from "./Skill";
 export class Skills extends Component {
   constructor(props) {

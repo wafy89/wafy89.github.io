@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import myImg from "../assists/wafi3.jpg";
-import Fade from "react-reveal/Fade";
-import Bounce from "react-reveal/Bounce";
+import { Fade, Bounce } from "react-awesome-reveal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 class About extends Component {
   render() {

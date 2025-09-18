@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 class About extends Component {
   render() {
     return (
