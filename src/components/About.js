@@ -1,87 +1,60 @@
-import React, { Component } from "react";
+
+import React from "react";
 import { Fade } from "react-awesome-reveal";
-class About extends Component {
-  render() {
-    return (
-      <div className="aboutContainer">
-        <Fade bottom>
-          <div className="pageTitleContainer">
-            <div className="pageTitle" id="about">
-              ABOUT ME
-            </div>
+
+
+const About = () => {
+  const age = new Date().getFullYear() - 1989;
+  return (
+    <div className="aboutContainer">
+      <Fade bottom>
+        <div className="pageTitleContainer">
+          <div className="pageTitle" id="about">
+            ABOUT ME
+          </div>
+        </div>
+      </Fade>
+      <div className="aboutText">
+        <Fade left>
+          <div className="aboutTextSection">
+            <h2>Who's this guy?</h2>
+            <h4>
+              I'm Wafi Amer, {age} years old, originally from Syria and living in Leipzig, Germany since 2017. I speak English, German, and Arabic. Outside of coding, I enjoy music, football, and spending time outdoors when the weather is nice.
+            </h4>
           </div>
         </Fade>
-        <div className="aboutText">
-          <Fade left>
-            <div className="aboutTextSection">
-              <h2>Who's this guy?</h2>
-              <h4>
-                I'm Wafi Amer, 31 year old and coming from Syria. I live in
-                Leipzig, Germany since 2017. I can speak English, relatively
-                good German and Arabic. If I'm not coding I like to spend my
-                time playing or listening music, watching football matches or
-                going outside if the weather is nice.
-              </h4>
-            </div>
-          </Fade>
 
-          <Fade right>
-            <div className="aboutTextSection">
-              <h2>What is my web development experiences?</h2>
-              <h4>
-                I'm Front-End Web-Developer with 2 years experiance as vue developer, before that I have done a
-                web-development course in{" "}
-                <a
-                  className="aboutLinks"
-                  href="https://digitalcareerinstitute.org/?utm_medium=paid&utm_source=GoogleSearch&utm_campaign=9550003802&utm_content=97449268745&utm_term=dci%20leipzig&utm_term=dci%20leipzig&utm_campaign=Brand_Campaign&utm_source=adwords&utm_medium=ppc&hsa_acc=2750777619&hsa_cam=9550003802&hsa_grp=97449268745&hsa_ad=424581159567&hsa_src=g&hsa_tgt=kwd-903800554038&hsa_kw=dci%20leipzig&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwi_b3BRAGEiwAemPNU2jx8MFR_OwdhHtNxGrMysbf61M_58lmxXpAMk69sOzv6id3JcNYRBoCkQcQAvD_BwE"
-                  target="	_blank"
-                >
-                  Digital Career Institute
-                </a>
-                . I always have been passionate about web-development and
-                innovation.
-                as Vue developer by <a
-                  className="aboutLinks"
-                  href="https://relaxdays.de/"
-                  target="	_blank"
-                >
-                  Relaxdays GmbH
-                </a> I was responsable to implement and maintain Vue js Project to deliver a best user experiance for my collagues in deferant departments to do thier daily work.
-                During the web-development course I was the class tutor, helping my
-                classmates to understand our subjects. This also helped me to
-                improve my understanding, since explaining our exercises and
-                lessons to my classmates has also improved my experience.
+        <Fade right>
+          <div className="aboutTextSection">
+            <h2>My Web Development Experience</h2>
+            <h4>
+              I am a Fullstack Web Developer with 2.5 years of experience in React and Java/Spring Boot. At
+              <a className="aboutLinks" href="https://www.avision-it.de/" target="_blank"> Avision GmbH</a>,
+              I was responsible for implementing and maintaining React projects to deliver the best user experience for colleagues across different departments. On the backend, I have experience building REST APIs with Java/Spring Boot, connecting the frontend to databases and handling business logic. I am also familiar with microservices architecture using Spring Boot and Docker, and have focused on microfrontends in frontend development.
+            </h4>
+            <h4>
+              Previously, I worked as a Front-End Developer with 2 years of experience in Vue.js at
+              <a className="aboutLinks" href="https://relaxdays.de/" target="_blank"> Relaxdays GmbH</a>.
+              Before that, I completed a web development course at
+              <a className="aboutLinks" href="https://digitalcareerinstitute.org/" target="_blank"> Digital Career Institute</a>.
+              During the course, I was the class tutor, helping classmates understand the material, which also deepened my own knowledge and skills.
+            </h4>
+          </div>
+        </Fade>
 
-              </h4>
-            </div>
-          </Fade>
-
-          <Fade left>
-            <div className="aboutTextSection">
-              <h2>How I've chosen this work field?</h2>
-              <h4>
-                2009-2012 I studied in Syria High{" "}
-                <a
-                  className="aboutLinks"
-                  href="https://www.svuonline.org/en/program/hnd"
-                >
-                  {" "}
-                  National Diploma in Computing and Business Application{" "}
-                </a>{" "}
-                at Syrian-Virtual-University. this program was business focused
-                but it also contained web-development at the basic level. I
-                liked this field but I did't get the chance to work since this
-                field was very new in syria and no chances were available. but
-                when I came to germany I looked for such courses and luckily I
-                found a good One and I was all the Time interested of its
-                content.
-              </h4>
-            </div>
-          </Fade>
-        </div>
+        <Fade left>
+          <div className="aboutTextSection">
+            <h2>How I Chose This Career</h2>
+            <h4>
+              From 2009 to 2012, I studied for a
+              <a className="aboutLinks" href="https://www.svuonline.org/en/program/hnd"> National Diploma in Computing and Business Application </a>
+              at Syrian Virtual University. Although the program was business-focused, it included basic web development, which sparked my interest. At the time, web development was new in Syria and opportunities were limited. After moving to Germany, I pursued further courses and found my passion for this field.
+            </h4>
+          </div>
+        </Fade>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default About;
