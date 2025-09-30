@@ -12,18 +12,22 @@ $color-primary: #feb633;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media (min-width: 990px) {
     /* margin:  0 4rem; */
     height: 7rem;
     //padding-right: 5rem;
   }
+
   .logoContainer {
     //margin-left: 1rem;
     display: block;
     height: 100%;
+
     .logoImage {
       display: block;
       height: 5rem;
+
       @media (min-width: 990px) {
         height: 7rem;
       }
@@ -38,6 +42,7 @@ $color-primary: #feb633;
     height: 2rem;
     background-color: transparent;
     border: none;
+
     @media (min-width: 990px) {
       display: none;
     }
@@ -49,6 +54,7 @@ $color-primary: #feb633;
       margin: 0.3rem 0.3rem;
       transform-origin: center;
     }
+
     &:hover {
       .line {
         background-color: $color-primary;
@@ -87,6 +93,8 @@ $color-primary: #feb633;
   right: 0rem;
   left: 0;
   overflow: hidden;
+  font-weight: lighter;
+
   //width: 100%;
   @media (min-width: 990px) {
     //right: 5rem;
@@ -99,12 +107,14 @@ $color-primary: #feb633;
     position: fixed;
     background-color: transparent;
   }
+
   .navItem {
     position: relative;
     //width: 100%;
     margin: 0 2rem;
     align-self: center;
     font-size: 1.2rem;
+    font-weight: lighter;
 
     a {
       position: relative;
@@ -113,7 +123,8 @@ $color-primary: #feb633;
       text-align: center;
       width: 100%;
       color: gray;
-      font-weight: 700;
+      font-weight: lighter;
+
       &:before {
         position: absolute;
         bottom: 0;
@@ -124,6 +135,7 @@ $color-primary: #feb633;
         background-color: $color-primary;
         transition: 0.2s ease-in-out;
       }
+
       &:hover {
         &:before {
           width: 60%;
@@ -143,9 +155,11 @@ $color-primary: #feb633;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+
   //flex-wrap: wrap;
   .navItem {
     margin: 0 auto 2rem auto;
+
     a {
       visibility: 1;
       display: block;

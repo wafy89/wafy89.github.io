@@ -13,11 +13,11 @@ const Skills = () => {
     { skillName: "Express", level: 50 },
     { skillName: "Mongoose", level: 50 },
     { skillName: "Springboot", level: 70 },
-    { skillName: "JAVA", level: 50 },
+    { skillName: "Java", level: 50 },
     { skillName: "Postgres", level: 80 },
     { skillName: "Docker", level: 60 },
     { skillName: "Mongoose", level: 50 },
-    { skillName: "GraphQl", level: 80 },
+    { skillName: "GraphQL", level: 80 },
   ]);
 
   return (
