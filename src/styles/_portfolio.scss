@@ -8,22 +8,27 @@
   align-items: center;
   justify-content: space-evenly;
   margin: auto;
+
   @media (min-width: 990px) {
     //padding: 0 4rem;
-    
-  //margin: 2rem;
+
+    //margin: 2rem;
   }
-  .pageTitleContainer{
+
+  .pageTitleContainer {
     margin-top: 15rem;
+
     @media (min-width:990px) {
-        margin-top: auto;
+      margin-top: auto;
     }
   }
+
   .projects {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+
     .project {
       text-decoration: none;
       transition: 0.2s ease-in-out;
@@ -41,14 +46,17 @@
       padding: 2rem;
       background-position: center;
       background-size: cover;
-      background-repeat: no-repeat ;
+      background-repeat: no-repeat;
+
       @media (min-width: 990px) {
         width: 30rem;
         align-items: flex-start;
+
         //text-align: center;
         &:hover {
-          box-shadow: 5px 5px 5px grey;
-          text-shadow: 2px 2px 5px rgb(102, 101, 101);
+          box-shadow: 2px 2px 2px grey;
+          opacity: .9;
+          //t text-shadow: 2px 2px 5px rgb(102, 101, 101);
         }
       }
 
@@ -58,6 +66,7 @@
         font-size: 2rem;
         text-align: center;
       }
+
       .projectDescription {
         font-size: 1.5rem;
         text-align: center;
@@ -67,46 +76,43 @@
 }
 
 .yellow {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(254, 182, 51, 0.8),
-      rgba(254, 182, 51, 0.8)
-    )/* ,
+      rgba(254, 182, 51, 0.8))
+    /* ,
     url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU); */
-   
+
 }
+
 .grey {
-  background-color:  rgba(26, 25, 23, 0.8)
+  background-color: rgba(26, 25, 23, 0.8)
 }
+
 .pink {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(251, 89, 151, 0.8),
-      rgba(245, 119, 167, 0.8)
-    )/* ,
+      rgba(245, 119, 167, 0.8))
+    /* ,
     url("../assists/cocktail.png"); */
 }
 
 .blue {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(74, 130, 251, 0.8),
-      rgba(34, 84, 250, 0.8)
-    )/* ,
+      rgba(34, 84, 250, 0.8))
+    /* ,
     url("../assists/movie.png"); */
-  
+
 }
+
 .green {
-  background: linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(36, 194, 4, 0.8),
-      rgba(102, 200, 82, 0.8)
-    )/* ,
+      rgba(102, 200, 82, 0.8))
+    /* ,
     url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTm3aBMquFc-OABYQ3IgHrzoCB50-ILZeciBA&usqp=CAU); */
 }
 
 .link {
   text-decoration: none;
 }
-
-

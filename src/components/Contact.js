@@ -51,7 +51,7 @@ const Contact = () => {
           <button type="submit" className="sendBTN">SEND</button>
         </div>
         {status === "SUCCESS" ? <p>Thanks!</p> : ""}
-        {status === "ERROR" && <p>please fill all the field with valid date.</p>}
+        {status === "ERROR" && <p>Please fill in all the fields with valid data.</p>}
       </form>
     </div>
   );
