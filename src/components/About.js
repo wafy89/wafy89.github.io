@@ -1,59 +1,65 @@
+import React, { useEffect, useRef } from "react";
 
-import React from "react";
-import { Fade } from "react-awesome-reveal";
-
+const contactItems = [
+  { label: "Phone", value: "+49 1590 6501550" },
+  { label: "Email", value: "wafy89@gmail.com" },
+  { label: "Location", value: "Leipzig, Germany" },
+  { label: "Website", value: "wafiamer.com" },
+  { label: "GitHub", value: "github.com/wafy89" },
+  { label: "Languages", value: "AR · EN · DE" },
+];
 
 const About = () => {
-  const age = new Date().getFullYear() - 1989;
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.querySelectorAll(".reveal").forEach((r) => r.classList.add("visible"));
+        }
+      },
+      { threshold: 0.12 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="aboutContainer">
-      <Fade bottom>
-        <div className="pageTitleContainer">
-          <div className="pageTitle" id="about">
-            ABOUT ME
+    <section className="aboutContainer" id="about" ref={sectionRef}>
+      <p className="reveal reveal-delay-1 section-label">Profile</p>
+      <h2 className="reveal reveal-delay-2 section-title">About</h2>
+      <p className="reveal reveal-delay-2 section-subtitle">
+        Full-Stack Developer with 5+ years of experience building scalable, high-performance applications.
+        Strong background in React, Microfrontends, Spring Boot, PostgreSQL, and certified in AI Engineering.
+      </p>
+      <div className="aboutGrid">
+        <div className="aboutCardMain reveal reveal-delay-3">
+          <div className="cardOuter bezel-outer">
+            <div className="cardInner bezel-inner">
+              <p className="aboutBio">
+                Full-Stack Developer with 5+ years of experience building scalable, high-performance applications.
+                Strong background in React, Microfrontends, Spring Boot, PostgreSQL, and certified in AI Engineering
+                including LLMs, RAG, and Prompt Engineering. Fast learner, problem-solver, and highly adaptable —
+                seeking impactful roles in FinTech, AI-powered systems, or enterprise software.
+              </p>
+            </div>
           </div>
         </div>
-      </Fade>
-      <div className="aboutText">
-        <Fade left>
-          <div className="aboutTextSection">
-            <h2>Who's this guy?</h2>
-            <h4>
-              I'm Wafi Amer, {age} years old, originally from Syria and living in Leipzig, Germany, since 2017. I speak English, German, and Arabic. Outside of coding, I enjoy music, football, and spending time outdoors when the weather is nice.
-            </h4>
+        {contactItems.map((item, i) => (
+          <div key={item.label} className={`aboutCard reveal reveal-delay-${Math.min(i + 3, 6)}`}>
+            <div className="cardOuter bezel-outer">
+              <div className="cardInner bezel-inner">
+                <span className="aboutCardLabel">{item.label}</span>
+                <span className="aboutCardValue">{item.value}</span>
+              </div>
+            </div>
           </div>
-        </Fade>
-
-        <Fade right>
-          <div className="aboutTextSection">
-            <h2>My Web Development Experience</h2>
-            <h4>
-              I am a full-stack web developer with 2.5 years of experience in React and Java/Spring Boot. At
-              <a className="aboutLinks" href="https://www.avision-it.de/" target="_blank">Avision GmbH</a>,
-              I was responsible for implementing and maintaining React projects to deliver the best user experience for colleagues across different departments. On the back-end, I have experience building REST APIs with Java/Spring Boot, connecting the frontend to databases, and handling business logic. I am also familiar with microservices architecture using Spring Boot and Docker, and have focused on micro-frontends in frontend development.
-            </h4>
-            <h4>
-              Previously, I worked as a front-end developer with 2 years of experience in Vue.js at
-              <a className="aboutLinks" href="https://relaxdays.de/" target="_blank">Relaxdays GmbH</a>.
-              Before that, I completed a web development course at
-              <a className="aboutLinks" href="https://digitalcareerinstitute.org/" target="_blank">Digital Career Institute</a>.
-              During the course, I was the class tutor, helping classmates understand the material, which also deepened my own knowledge and skills.
-            </h4>
-          </div>
-        </Fade>
-
-        <Fade left>
-          <div className="aboutTextSection">
-            <h2>How I Chose This Career</h2>
-            <h4>
-              From 2009 to 2012, I studied for a
-              <a className="aboutLinks" href="https://www.svuonline.org/en/program/hnd"> National Diploma in Computing and Business Application </a>
-              at Syrian Virtual University. Although the program was business-focused, it included basic web development, which sparked my interest. At the time, web development was new in Syria and opportunities were limited. After moving to Germany, I pursued further courses and found my passion for this field.
-            </h4>
-          </div>
-        </Fade>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

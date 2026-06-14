@@ -1,96 +1,103 @@
-import React from "react";
-import { Fade } from "react-awesome-reveal";
+import React, { useEffect, useRef } from "react";
+
+const projects = [
+  {
+    title: "Gecko DHL App",
+    description: "Internal logistics platform for DHL. React, GraphQL, Apollo, Microfrontends, Material UI, Spring Boot, PostgreSQL, RabbitMQ, Gradle.",
+    accent: "accent-amber",
+    featured: true,
+  },
+  {
+    title: "PurchaseApp",
+    description: "Internal procurement system — Vue.js, Vuex, Quasar, TypeScript, OpenAPI Generator",
+    url: "https://relaxdays.de/",
+    accent: "accent-green",
+  },
+  {
+    title: "PhotoApp",
+    description: "Product photo management system — Vue 3, Pinia, Quasar, TypeScript, Vite, Keycloak",
+    url: "https://relaxdays.de/",
+    accent: "accent-purple",
+  },
+  {
+    title: "Shared Component Library",
+    description: "npm-based design system with unified UI components, design tokens, and utilities — used across all microfrontends",
+    accent: "accent-rose",
+  },
+  {
+    title: "Movie App",
+    description: "React.js with Hooks, Styled Components, React Router",
+    url: "http://wafiamer.com/MovieApp/",
+    accent: "accent-slate",
+  },
+  {
+    title: "Cocktail Master",
+    description: "React.js, Material UI Components, React Router",
+    url: "https://wafiamer.com/cocktail-master-app/",
+    accent: "accent-blue",
+    featured: true,
+  },
+];
 
 const Portfolio = () => {
-  return (
-    <div className="portfolioContainer" id="portfolio">
-      <Fade bottom>
-        <div className="pageTitleContainer">
-          <div className="pageTitle">Portfolio</div>
-        </div>
-      </Fade>
-      <div className="projects">
-        <a
-          className="link"
-          target="_blank"
-          href="http://wafiamer.com/MovieApp/"
-        >
-          <Fade left>
-            <div className="project blue">
-              <h3 className="projectTitle"> Movie App </h3>
-              <h5 className="projectDescription">
-                Technologies used: React.js with Hooks , Styled Components,
-                ReactRouter
-              </h5>
-            </div>
-          </Fade>
-        </a>
-        <a
-          className="link"
-          target="_blank"
-          href="https://wafiamer.com/cocktail-master-app/"
-        >
-          <Fade right>
-            <div className=" project pink">
-              <h3 className="projectTitle"> Cocktail Master </h3>
-              <h5 className="projectDescription">
-                {" "}
-                Technologies used:React.js , Material UI Components,
-                ReactRouter
-              </h5>
-            </div>
-          </Fade>
-        </a>
-        <a
-          className="link"
-          target="_blank"
-          href="https://competent-fermat-dfa6e3.netlify.app/"
-        >
-          <Fade left>
-            <div className=" project yellow">
-              <h3 className="projectTitle"> Philipp </h3>
-              <h5 className="projectDescription">
-                {" "}
-                a website about my son Technologies used: HTML5 , CSS, Vanilla
-                JS, Glider.js.
-              </h5>
-            </div>
-          </Fade>
-        </a>
+  const sectionRef = useRef(null);
 
-        <a
-          className="link"
-          target="_blank"
-          href="https://wafiamer.com/HTML-CSS-PORTFOLIO/"
-        >
-          <Fade right>
-            <div className=" project green">
-              <h3 className="projectTitle"> HTML-CSS-PORTFOLIO</h3>
-              <h5 className="projectDescription">
-                {" "}
-                Technologies used:HTML5 , Sass{" "}
-              </h5>
-            </div>
-          </Fade>
-        </a>
-        <a
-          className="link"
-          target="_blank"
-          href="https://github.com/wafy89/Todo-API"
-        >
-          <Fade left>
-            <div className=" project grey">
-              <h3 className="projectTitle"> Todo API </h3>
-              <h5 className="projectDescription">
-                {" "}
-                an Express Server for a Todo-APP <br />
-                Technologies used: express , Mongoose, JWT Token.
-              </h5>
-            </div>
-          </Fade>
-        </a>
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.querySelectorAll(".reveal").forEach((r) => r.classList.add("visible"));
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section className="portfolioContainer" id="portfolio" ref={sectionRef}>
+      <p className="reveal reveal-delay-1 section-label">Portfolio</p>
+      <h2 className="reveal reveal-delay-2 section-title">Featured Projects</h2>
+      <p className="reveal reveal-delay-2 section-subtitle">
+        Enterprise systems and applications I've built and shipped.
+      </p>
+      <div className="projects">
+        {projects.map((p, i) => {
+          const CardWrapper = p.url ? "a" : "div";
+          const cardProps = p.url
+            ? { href: p.url, target: "_blank", rel: "noreferrer" }
+            : {};
+
+          return (
+            <CardWrapper
+              key={p.title}
+              {...cardProps}
+              className={`projectCard bezel-outer${p.featured ? " featured" : ""} reveal reveal-delay-${Math.min(i + 3, 6)}`}
+            >
+              <div className="projectContent bezel-inner">
+                <div className="projectTop">
+                  <div className={`projectAccent ${p.accent}`} />
+                  {p.url && (
+                    <div className="projectArrowCircle">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                <div className="projectBottom">
+                  <h3 className="projectTitle">{p.title}</h3>
+                  <p className="projectDescription">{p.description}</p>
+                </div>
+              </div>
+            </CardWrapper>
+          );
+        })}
       </div>
-    </div>
+    </section>
   );
 };
 

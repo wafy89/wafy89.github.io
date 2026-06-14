@@ -1,58 +1,73 @@
-$color-primary: #feb633;
-
 .footerContainer {
-  overflow: hidden;
-  margin-top: 2rem;
-  position: absolute;
-  width: 100vw;
-  right: 0;
-  //bottom: 0;
-  left: 0;
-  height: 30rem;
+  border-top: 1px solid var(--color-border);
+  padding: 40px 24px 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: stretch;
-  background-color: rgb(241, 241, 241);
-  @media (min-width: 990px) {
-    background-image: url("../assists/logo4.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 20rem;
-  }
-  h3 {
-    width: 100%;
-    color: #666;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
     text-align: center;
-    @media (min-width: 990px) {
-      font-size: 1.5rem;
-    }
-  }
-  p {
-    // font-size: 1rem;
-    color: #999;
-    text-align: center;
-    @media (min-width: 990px) {
-      font-size: 1.2rem;
-    }
-    a {
-      color: $color-primary;
-    }
+    padding: 32px 20px 24px;
   }
 
-  .contactInfo {
+  .footerInfo {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    @media (min-width: 990px) {
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: row;
+    gap: 4px;
+
+    p {
+      font-size: 0.8125rem;
+      color: var(--color-text-tertiary);
+      font-weight: 400;
+
+      a {
+        color: var(--color-text-secondary);
+        transition: color 0.35s var(--ease-spring);
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+
+    .footerName {
+      font-weight: 600;
+      color: var(--color-text);
+      font-size: 0.875rem;
+      font-family: "Syne", sans-serif;
     }
   }
-}
 
-.wafi {
-  color: $color-primary;
+  .footerLinks {
+    display: flex;
+    gap: 24px;
+
+    a {
+      font-size: 0.8125rem;
+      color: var(--color-text-tertiary);
+      font-weight: 400;
+      transition: color 0.35s var(--ease-spring);
+      font-family: "Plus Jakarta Sans", sans-serif;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .footerCopyright {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--color-text-tertiary);
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    margin-top: 4px;
+    font-weight: 400;
+  }
 }

@@ -1,0 +1,202 @@
+.experienceContainer {
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  .expTimeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 32px;
+    position: relative;
+
+    .expEntry {
+      display: flex;
+      gap: 24px;
+      position: relative;
+
+      &:not(:last-child) {
+        padding-bottom: 40px;
+      }
+
+      .expMarkerLine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        width: 24px;
+        padding-top: 28px;
+
+        @media (max-width: 600px) {
+          display: none;
+        }
+
+        .expDot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: var(--color-accent);
+          flex-shrink: 0;
+        }
+
+        .expLine {
+          width: 1px;
+          flex: 1;
+          background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.03) 100%
+          );
+          margin-top: 8px;
+        }
+      }
+
+      .expCardShell {
+        border-radius: 14px;
+        flex: 1;
+        transition: all 0.55s var(--ease-spring);
+
+        &:hover {
+          transform: translateY(-3px);
+          border-color: var(--color-border-hover);
+          box-shadow: 0 16px 48px rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      .expCard {
+        border-radius: 10px;
+        padding: 32px;
+        transition: background 0.55s var(--ease-spring);
+
+        @media (max-width: 600px) {
+          padding: 24px;
+        }
+
+        .expHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 12px;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          .expHeaderLeft {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          }
+
+          .expCompany {
+            font-family: "Syne", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            letter-spacing: -0.02em;
+          }
+
+          .expLocation {
+            font-size: 0.75rem;
+            color: var(--color-text-tertiary);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            background: var(--color-bg-elevated);
+            padding: 3px 10px;
+            border-radius: 50px;
+            border: 1px solid var(--color-border);
+          }
+
+          .expPeriod {
+            font-family: "JetBrains Mono", "SF Mono", monospace;
+            font-size: 0.6875rem;
+            color: var(--color-accent);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+          }
+        }
+
+        .expRole {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-size: 0.875rem;
+          font-weight: 600;
+          color: var(--color-accent-2);
+          margin-bottom: 10px;
+          letter-spacing: 0.02em;
+        }
+
+        .expDesc {
+          font-size: 0.9rem;
+          line-height: 1.7;
+          color: var(--color-text-secondary);
+          margin-bottom: 18px;
+          font-weight: 400;
+        }
+
+        .expHighlights {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-bottom: 20px;
+
+          li {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            line-height: 1.55;
+            padding-left: 20px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 9px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: var(--color-accent);
+              opacity: 0.4;
+            }
+          }
+        }
+
+        .expProjects {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .expProjectPill {
+            padding: 14px 18px;
+            border-radius: 10px;
+            background: var(--color-bg-elevated);
+            border: 1px solid var(--color-border);
+            transition: all 0.45s var(--ease-spring);
+
+            &:hover {
+              border-color: var(--color-border-hover);
+              background: var(--color-bg-card-hover);
+            }
+
+            .expProjectName {
+              display: block;
+              font-family: "Syne", sans-serif;
+              font-size: 0.9rem;
+              font-weight: 700;
+              color: var(--color-text);
+              margin-bottom: 4px;
+              letter-spacing: -0.01em;
+            }
+
+            .expProjectDesc {
+              font-size: 0.8rem;
+              color: var(--color-text-tertiary);
+              line-height: 1.5;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

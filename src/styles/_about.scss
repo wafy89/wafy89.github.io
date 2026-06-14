@@ -1,60 +1,94 @@
-$color-primary: rgb(254, 182, 51);
-
 .aboutContainer {
-    width: 80vw;
-    max-width: 1200px;
-    margin: 5rem auto;
-    //padding: 2rem 0;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    @media (min-width: 990px) {
-        padding: 0 4rem;
-      }
-    .aboutText {
-/*       display: flex;
-      justify-content: space-evenly;
-      align-items: flex-start; */
-      //margin-bottom: 2rem;
-      .aboutTextSection{
-          border: .1rem solid #32333c;
-          margin-bottom: 8rem;
-          text-align: center;
-        
-      h2 {
-        margin-top: -2px;
-        font-size: 1.3rem;
-        padding:1rem 0;
-        //min-height: 5rem;
-        color: #fff;
-        background-color: #32333c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @media (min-width:990px) {
-          font-size: 1.7rem;
-        }
+  padding: var(--section-padding);
+  max-width: var(--max-width);
+  margin: 0 auto;
 
+  .aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 32px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+
+    .aboutCardMain {
+      grid-column: span 2;
+
+      @media (max-width: 768px) {
+        grid-column: span 2;
       }
-      h4 {
-        margin: 2px;
-        font-size: 1rem;
-        color: #666;
-        //max-width: 30rem;
-        margin: 1rem;
-        @media (min-width:990px) {
-          font-size: 1.2rem;
+
+      @media (max-width: 480px) {
+        grid-column: span 1;
+      }
+
+      .cardOuter {
+        border-radius: 14px;
+        height: 100%;
+      }
+
+      .cardInner {
+        border-radius: 10px;
+        padding: 28px;
+        height: 100%;
+      }
+
+      .aboutBio {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: var(--color-text-secondary);
+        font-weight: 400;
+        text-wrap: pretty;
+      }
+    }
+
+    .aboutCard {
+      .cardOuter {
+        border-radius: 14px;
+        height: 100%;
+        transition: all 0.55s var(--ease-spring);
+
+        &:hover {
+          transform: translateY(-2px);
+          border-color: var(--color-border-hover);
         }
-        .aboutLinks{
-            text-decoration: none;
-            cursor: pointer;
-            &:active,
-            &:hover,
-            &:visited,
-            &:link{
-                color: $color-primary;
-            }
-        }
-      }}}}
+      }
+
+      .cardInner {
+        border-radius: 10px;
+        padding: 20px 22px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        transition: background 0.55s var(--ease-spring);
+      }
+
+      &:hover .cardInner {
+        background: var(--color-bg-card-hover);
+      }
+
+      .aboutCardLabel {
+        font-size: 0.625rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-text-tertiary);
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      .aboutCardValue {
+        font-size: 0.875rem;
+        color: var(--color-text);
+        font-weight: 500;
+      }
+    }
+  }
+}

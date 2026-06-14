@@ -1,28 +1,37 @@
-import React, { Component } from "react";
+import React from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Education from "./components/Education";
 import Portfolio from "./components/Portfolio";
-import About from "./components/About"
-import Skills from "./components/Skills"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import "./App.scss";
 
-export class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <NavBar />
-        <div className="appContainer">
-        <Home />
-        <About/>
-        <Skills/>
-        <Portfolio />
-        <Contact/></div>
-        <Footer/>
+function App() {
+  return (
+    <div className="App">
+      <div className="noise-overlay" aria-hidden="true" />
+      <div className="ambient-orbs" aria-hidden="true">
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
+        <div className="orb orb-3" />
       </div>
-    );
-  }
+      <NavBar />
+      <main className="appContainer" id="main-content">
+        <Home />
+        <About />
+        <Experience />
+        <Skills />
+        <Education />
+        <Portfolio />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
