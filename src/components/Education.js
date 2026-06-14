@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 const education = [
   {
@@ -7,7 +7,6 @@ const education = [
     year: "2026",
     hours: "1,400 teaching hours",
     focus: "Python, FastAPI, SQL, REST APIs, Generative AI, LLMs, Prompt Engineering, LLM Evaluation, AI API Integration, Deployment",
-    featured: true,
   },
   {
     degree: "Web Development Program (AZAV Certified, Full-Time)",
@@ -32,57 +31,29 @@ const strengths = [
 ];
 
 const Education = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll(".reveal").forEach((r) => r.classList.add("visible"));
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className="educationContainer" id="education" ref={sectionRef}>
-      <p className="reveal reveal-delay-1 section-label">Education</p>
-      <h2 className="reveal reveal-delay-2 section-title">Learning & Growth</h2>
+    <section className="educationContainer" id="education">
+      <p className="section-label">Education</p>
+      <h2 className="section-title">Learning & Growth</h2>
       <div className="eduGrid">
-        {education.map((edu, i) => (
-          <div
-            key={edu.degree}
-            className={`eduCard${edu.featured ? " featured" : ""} reveal reveal-delay-${Math.min(i + 3, 5)}`}
-          >
-            <div className="cardOuter bezel-outer">
-              <div className="cardInner bezel-inner">
-                <div className="eduHeader">
-                  <span className="eduYear">{edu.year}</span>
-                  {edu.hours && <span className="eduHours">{edu.hours}</span>}
-                </div>
-                <h3 className="eduDegree">{edu.degree}</h3>
-                <p className="eduSchool">{edu.school}</p>
-                <p className="eduFocus">{edu.focus}</p>
-              </div>
+        {education.map((edu) => (
+          <div key={edu.degree} className="eduCard">
+            <div className="eduHeader">
+              <span className="eduYear">{edu.year}</span>
+              {edu.hours && <span className="eduHours">{edu.hours}</span>}
             </div>
+            <h3 className="eduDegree">{edu.degree}</h3>
+            <p className="eduSchool">{edu.school}</p>
+            <p className="eduFocus">{edu.focus}</p>
           </div>
         ))}
       </div>
-      <div className="strengthsRow reveal reveal-delay-6">
-        <div className="cardOuter bezel-outer strengthsShell">
-          <div className="cardInner bezel-inner strengthsInner">
-            <h3 className="strengthsTitle">Strengths</h3>
-            <div className="strengthsList">
-              {strengths.map((s, i) => (
-                <span key={i} className="strengthPill">{s}</span>
-              ))}
-            </div>
-          </div>
+      <div className="strengthsRow">
+        <h3 className="strengthsTitle">Strengths</h3>
+        <div className="strengthsList">
+          {strengths.map((s) => (
+            <span key={s} className="strengthItem">{s}</span>
+          ))}
         </div>
       </div>
     </section>

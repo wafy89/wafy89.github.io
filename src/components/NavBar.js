@@ -1,20 +1,9 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import logo from "../assists/logo4.png";
 
 const NavBar = () => {
   const [extend, setExtend] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
-
-  const handleScroll = useCallback(() => {
-    const isScrolling = window.scrollY > 40;
-    if (isScrolling !== scrolling) setScrolling(isScrolling);
-  }, [scrolling]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
 
   useEffect(() => {
     return () => document.body.classList.remove("menu-open");
@@ -31,12 +20,10 @@ const NavBar = () => {
     document.body.classList.toggle("menu-open", next);
   };
 
-  const navClass = ["navContainer", scrolling ? "scroll" : ""].filter(Boolean).join(" ");
-
   const links = ["Home", "About", "Experience", "Skills", "Education", "Portfolio"];
 
   return (
-    <nav className={navClass}>
+    <nav className="navContainer">
       <div className="logoContainer">
         <a href="#home" onClick={handleNavClick}>
           <img className="logoImage" src={logo} alt="Wafi Amer" />
@@ -44,7 +31,11 @@ const NavBar = () => {
       </div>
       <div className={`navigation${extend ? " extend" : ""}`}>
         {links.map((item, i) => (
-          <div key={item} className="navItem" style={{ transitionDelay: extend ? `${0.05 + i * 0.06}s` : "0s" }}>
+          <div
+            key={item}
+            className="navItem"
+            style={{ transitionDelay: extend ? `${0.05 + i * 0.04}s` : "0s" }}
+          >
             <AnchorLink href={`#${item.toLowerCase()}`} onClick={handleNavClick}>
               {item}
             </AnchorLink>

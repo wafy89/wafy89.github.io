@@ -7,16 +7,16 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: 36px;
+    margin-top: 48px;
     position: relative;
 
     .expEntry {
       display: flex;
-      gap: 28px;
+      gap: 32px;
       position: relative;
 
       &:not(:last-child) {
-        padding-bottom: 48px;
+        padding-bottom: 56px;
       }
 
       .expMarkerLine {
@@ -24,116 +24,92 @@
         flex-direction: column;
         align-items: center;
         flex-shrink: 0;
-        width: 28px;
-        padding-top: 34px;
+        width: 12px;
+        padding-top: 4px;
 
         @media (max-width: 600px) {
           display: none;
         }
 
         .expDot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: var(--accent-primary);
+          width: 8px;
+          height: 8px;
+          background: var(--accent);
           flex-shrink: 0;
-          box-shadow: 0 0 16px var(--accent-primary-glow);
         }
 
         .expLine {
-          width: 1px;
+          width: 0.5px;
           flex: 1;
-          background: linear-gradient(180deg, rgba(0, 229, 153, 0.25) 0%, rgba(255, 255, 255, 0.04) 100%);
-          margin-top: 8px;
+          background: #D0D0D0;
+          margin-top: 12px;
         }
       }
 
-      .expCardShell {
-        border-radius: 1.5rem;
+      .expContent {
         flex: 1;
-        transition: all 0.55s var(--ease-spring);
-
-        &:hover {
-          transform: translateY(-4px);
-          border-color: var(--border-medium);
-          box-shadow: 0 20px 56px rgba(0, 0, 0, 0.4);
-        }
-      }
-
-      .expCard {
-        border-radius: calc(1.5rem - 1px);
-        padding: 36px;
-        transition: background 0.55s var(--ease-spring);
-
-        @media (max-width: 600px) {
-          padding: 24px;
-        }
 
         .expHeader {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          margin-bottom: 14px;
+          margin-bottom: 12px;
           flex-wrap: wrap;
-          gap: 10px;
+          gap: 8px;
 
           .expHeaderLeft {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             flex-wrap: wrap;
           }
 
           .expCompany {
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.15rem;
+            font-weight: 400;
             color: var(--text-primary);
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             text-decoration: none;
-            transition: color 0.35s var(--ease-spring);
+            transition: color var(--ease-fast);
 
             &[href]:hover {
-              color: var(--accent-primary);
+              color: var(--accent);
             }
           }
 
           .expLocation {
-            font-size: 0.75rem;
+            font-size: 0.6875rem;
             color: var(--text-tertiary);
-            font-weight: 500;
+            font-weight: 400;
             letter-spacing: 0.05em;
-            background: rgba(255, 255, 255, 0.04);
-            padding: 4px 12px;
-            border-radius: 9999px;
-            border: 1px solid var(--border-subtle);
+            padding: 3px 10px;
+            border: 0.5px solid #D0D0D0;
           }
 
           .expPeriod {
-            font-family: "JetBrains Mono", "SF Mono", monospace;
             font-size: 0.6875rem;
-            color: var(--accent-primary);
-            font-weight: 500;
+            color: var(--text-tertiary);
+            font-weight: 400;
             letter-spacing: 0.05em;
             white-space: nowrap;
           }
         }
 
         .expRole {
-          font-family: "Plus Jakarta Sans", sans-serif;
-          font-size: 0.9rem;
-          font-weight: 600;
-          color: var(--accent-secondary);
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: var(--accent);
           margin-bottom: 12px;
-          letter-spacing: 0.02em;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
         }
 
         .expDesc {
-          font-size: 0.9rem;
+          font-size: 0.875rem;
           line-height: 1.75;
           color: var(--text-secondary);
-          margin-bottom: 22px;
-          font-weight: 400;
+          margin-bottom: 20px;
+          font-weight: 300;
         }
 
         .expHighlights {
@@ -141,26 +117,25 @@
           padding: 0;
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          margin-bottom: 24px;
+          gap: 8px;
+          margin-bottom: 28px;
 
           li {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: var(--text-secondary);
-            line-height: 1.6;
-            padding-left: 22px;
+            line-height: 1.7;
+            padding-left: 16px;
             position: relative;
+            font-weight: 300;
 
             &::before {
               content: "";
               position: absolute;
               left: 0;
-              top: 10px;
-              width: 5px;
-              height: 5px;
-              border-radius: 50%;
-              background: var(--accent-primary);
-              opacity: 0.5;
+              top: 11px;
+              width: 4px;
+              height: 4px;
+              background: var(--accent);
             }
           }
         }
@@ -168,35 +143,26 @@
         .expProjects {
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 1px;
 
-          .expProjectPill {
-            padding: 16px 20px;
-            border-radius: 1rem;
-            background: rgba(255, 255, 255, 0.025);
-            border: 1px solid var(--border-subtle);
-            transition: all 0.45s var(--ease-spring);
-
-            &:hover {
-              border-color: var(--border-medium);
-              background: var(--bg-card-hover);
-            }
+          .expProject {
+            padding: 16px 0;
+            border-top: 0.5px solid #E0E0E0;
 
             .expProjectName {
               display: block;
-              font-family: "Space Grotesk", sans-serif;
-              font-size: 0.9rem;
-              font-weight: 700;
+              font-size: 0.875rem;
+              font-weight: 500;
               color: var(--text-primary);
-              margin-bottom: 4px;
-              letter-spacing: -0.02em;
+              margin-bottom: 2px;
+              letter-spacing: -0.01em;
             }
 
             .expProjectDesc {
-              font-size: 0.8rem;
+              font-size: 0.75rem;
               color: var(--text-tertiary);
-              line-height: 1.5;
-              font-weight: 400;
+              line-height: 1.6;
+              font-weight: 300;
             }
           }
         }

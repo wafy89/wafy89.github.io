@@ -1,39 +1,20 @@
 .navContainer {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  height: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  margin-top: 20px;
-  width: calc(100% - 48px);
-  max-width: 720px;
-  background: rgba(10, 10, 10, 0.65);
-  backdrop-filter: blur(32px) saturate(2);
-  -webkit-backdrop-filter: blur(32px) saturate(2);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 9999px;
-  transition: all 0.55s var(--ease-spring);
-
-  &.scroll {
-    margin-top: 10px;
-    background: rgba(12, 12, 12, 0.82);
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow:
-      0 12px 48px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  }
+  padding: 0 48px;
+  height: 64px;
+  background: #FFFFFF;
+  border-bottom: 0.5px solid #E0E0E0;
 
   @media (max-width: 768px) {
-    width: calc(100% - 32px);
-    max-width: none;
-    margin-top: 12px;
-    padding: 0 18px;
-    border-radius: 9999px;
+    padding: 0 24px;
+    height: 56px;
   }
 
   .logoContainer {
@@ -41,11 +22,10 @@
     align-items: center;
 
     .logoImage {
-      height: 26px;
+      height: 20px;
       width: auto;
-      filter: brightness(1.2);
-      opacity: 0.8;
-      transition: opacity 0.4s var(--ease-spring);
+      opacity: 0.85;
+      transition: opacity var(--ease-fast);
 
       &:hover {
         opacity: 1;
@@ -56,20 +36,19 @@
   .navigation {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0;
 
     @media (max-width: 768px) {
       position: fixed;
       inset: 0;
-      background: rgba(6, 6, 6, 0.94);
-      backdrop-filter: blur(48px) saturate(3);
-      -webkit-backdrop-filter: blur(48px) saturate(3);
+      background: #FFFFFF;
       flex-direction: column;
       justify-content: center;
       gap: 0;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.55s var(--ease-out-expo);
+      transition: opacity var(--ease-fast);
+      z-index: 99;
 
       &.extend {
         opacity: 1;
@@ -82,13 +61,13 @@
 
       a {
         display: block;
-        padding: 8px 18px;
-        font-size: 0.8rem;
-        font-weight: 500;
+        padding: 10px 20px;
+        font-size: 0.75rem;
+        font-weight: 400;
         color: var(--text-secondary);
-        letter-spacing: 0.03em;
-        transition: color 0.4s var(--ease-spring);
-        font-family: "Plus Jakarta Sans", sans-serif;
+        letter-spacing: 0.06em;
+        transition: color var(--ease-fast);
+        text-transform: uppercase;
 
         &:hover {
           color: var(--text-primary);
@@ -96,27 +75,26 @@
       }
 
       &.contact a {
-        color: var(--accent-primary);
-        font-weight: 600;
+        color: var(--accent);
+        font-weight: 500;
 
         &:hover {
-          color: var(--accent-primary-hover);
-          text-shadow: 0 0 20px var(--accent-primary-glow);
+          color: var(--accent);
         }
       }
 
       @media (max-width: 768px) {
         a {
-          font-size: 2.2rem;
-          font-weight: 700;
-          padding: 20px 0;
+          font-size: 2rem;
+          font-weight: 300;
+          padding: 16px 0;
           text-align: center;
-          font-family: "Space Grotesk", sans-serif;
-          letter-spacing: -0.02em;
+          letter-spacing: 0.04em;
           opacity: 0;
-          transform: translateY(24px);
-          transition: all 0.65s var(--ease-spring);
+          transform: translateY(12px);
+          transition: all var(--ease-fast);
           color: var(--text-primary);
+          text-transform: none;
         }
       }
     }
@@ -125,6 +103,7 @@
       @media (max-width: 768px) {
         opacity: 1;
         transform: translateY(0);
+        transition-delay: 0.05s;
       }
     }
   }
@@ -134,10 +113,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     position: relative;
-    z-index: 1001;
+    z-index: 101;
     padding: 0;
 
     @media (max-width: 768px) {
@@ -150,10 +129,9 @@
 
     .line {
       width: 20px;
-      height: 1.5px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: all 0.45s var(--ease-spring);
+      height: 1px;
+      background: #0A0A0A;
+      transition: all var(--ease-fast);
       transform-origin: center;
     }
 
@@ -162,7 +140,6 @@
     }
     .middle.extend {
       opacity: 0;
-      transform: scaleX(0);
     }
     .down.extend {
       transform: rotate(-45deg) translate(2px, -2px);

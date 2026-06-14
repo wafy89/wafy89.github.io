@@ -5,203 +5,91 @@
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 36px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-top: 48px;
+    border-top: 0.5px solid #E0E0E0;
 
-    @media (max-width: 1000px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
     }
 
     .projectCard {
-      position: relative;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      text-decoration: none;
-      transition: all 0.55s var(--ease-spring);
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      border-bottom: 0.5px solid #E0E0E0;
+      border-right: 0.5px solid #E0E0E0;
+      min-height: 200px;
+      transition: background var(--ease-fast);
+      text-decoration: none;
       cursor: default;
+
+      &:nth-child(even) {
+        border-right: none;
+      }
+
+      @media (max-width: 768px) {
+        border-right: none;
+        min-height: auto;
+      }
 
       &[href] {
         cursor: pointer;
       }
 
-      &.featured {
-        grid-column: span 2;
-        grid-row: span 1;
-
-        @media (max-width: 1000px) {
-          grid-column: span 1;
-          grid-row: span 1;
-        }
-      }
-
       &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 56px rgba(0, 0, 0, 0.4);
-        border-color: var(--border-medium);
-
-        .projectContent {
-          background: var(--bg-card-hover);
-        }
-
-        .projectTop {
-          .projectAccent {
-            width: 48px;
-          }
-        }
-      }
-
-      .projectContent {
-        padding: 32px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-        position: relative;
-        z-index: 1;
-        border-radius: calc(1.5rem - 1px);
-        min-height: 220px;
-        transition: background 0.55s var(--ease-spring);
-
-        @media (max-width: 768px) {
-          padding: 24px;
-        }
-      }
-
-      &.featured .projectContent {
-        min-height: 280px;
+        background: #FAFAFA;
       }
 
       .projectTop {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: auto;
       }
 
-      .projectAccent {
-        width: 36px;
-        height: 3px;
-        border-radius: 2px;
-        margin-bottom: 22px;
-        transition: width 0.55s var(--ease-spring);
-
-        &.accent-amber {
-          background: linear-gradient(90deg, var(--accent-primary), #7CFFC4);
-          box-shadow: 0 0 10px rgba(0, 229, 153, 0.2);
-        }
-        &.accent-purple {
-          background: linear-gradient(90deg, var(--accent-secondary), #C084FC);
-          box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
-        }
-        &.accent-green {
-          background: linear-gradient(90deg, var(--accent-primary), var(--accent-primary-hover));
-          box-shadow: 0 0 10px rgba(0, 229, 153, 0.2);
-        }
-        &.accent-slate {
-          background: linear-gradient(90deg, var(--text-tertiary), var(--text-secondary));
-        }
-        &.accent-rose {
-          background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
-          box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
-        }
-        &.accent-blue {
-          background: linear-gradient(90deg, #60A5FA, #93C5FD);
-          box-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
-        }
-      }
-
-      .projectLinks {
+      .projectArrow {
+        width: 24px;
+        height: 24px;
         display: flex;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
         flex-shrink: 0;
+        opacity: 0;
+        transition: opacity var(--ease-fast);
 
-        .projectSourceLink {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid var(--border-subtle);
-          transition: all 0.55s var(--ease-spring);
-          opacity: 0;
-          transform: translateX(-8px);
-          color: var(--text-secondary);
-          text-decoration: none;
-
-          svg {
-            width: 16px;
-            height: 16px;
-          }
-
-          &:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-primary);
-          }
-        }
-
-        .projectArrowCircle {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid var(--border-subtle);
-          transition: all 0.55s var(--ease-spring);
-          flex-shrink: 0;
-          opacity: 0;
-          transform: translateX(-8px);
-
-          svg {
-            width: 14px;
-            height: 14px;
-            color: var(--text-secondary);
-          }
+        svg {
+          width: 14px;
+          height: 14px;
+          color: var(--accent);
         }
       }
 
-      &:hover .projectLinks .projectArrowCircle,
-      &:hover .projectLinks .projectSourceLink {
+      &:hover .projectArrow {
         opacity: 1;
-        transform: translateX(0);
       }
 
       .projectBottom {
-        margin-top: auto;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 0.5px solid #E0E0E0;
       }
 
       .projectTitle {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-        letter-spacing: -0.03em;
+        font-size: 1.15rem;
+        font-weight: 500;
+        margin-bottom: 6px;
+        letter-spacing: -0.02em;
         color: var(--text-primary);
       }
 
       .projectDescription {
-        font-size: 0.85rem;
+        font-size: 0.8125rem;
         line-height: 1.65;
         color: var(--text-secondary);
-        font-weight: 400;
-      }
-
-      &.featured .projectTitle {
-        font-size: 1.7rem;
-      }
-
-      &.featured .projectDescription {
-        font-size: 0.9rem;
+        font-weight: 300;
       }
     }
   }

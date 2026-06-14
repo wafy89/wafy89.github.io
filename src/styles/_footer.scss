@@ -1,61 +1,60 @@
 .footerContainer {
-  border-top: 1px solid var(--border-subtle);
-  padding: 48px 24px 36px;
+  border-top: 0.5px solid #E0E0E0;
+  padding: 36px 24px;
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-    padding: 36px 20px 28px;
   }
 
   .footerInfo {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 
     p {
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       color: var(--text-tertiary);
-      font-weight: 400;
+      font-weight: 300;
 
       a {
         color: var(--text-secondary);
-        transition: color 0.35s var(--ease-spring);
+        transition: color var(--ease-fast);
 
         &:hover {
-          color: var(--accent-primary);
+          color: var(--accent);
         }
       }
     }
 
     .footerName {
-      font-weight: 600;
+      font-weight: 500;
       color: var(--text-primary);
-      font-size: 0.9rem;
-      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8125rem;
     }
   }
 
   .footerLinks {
     display: flex;
-    gap: 28px;
+    gap: 24px;
 
     a {
-      font-size: 0.8125rem;
+      font-size: 0.75rem;
       color: var(--text-tertiary);
-      font-weight: 400;
-      transition: color 0.35s var(--ease-spring);
-      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 300;
+      transition: color var(--ease-fast);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
 
       &:hover {
-        color: var(--accent-primary);
+        color: var(--accent);
       }
     }
   }
@@ -63,11 +62,10 @@
   .footerCopyright {
     width: 100%;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--text-tertiary);
-    padding-top: 24px;
-    border-top: 1px solid var(--border-subtle);
-    margin-top: 6px;
-    font-weight: 400;
+    padding-top: 20px;
+    border-top: 0.5px solid #E0E0E0;
+    font-weight: 300;
   }
 }

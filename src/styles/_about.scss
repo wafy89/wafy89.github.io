@@ -3,11 +3,26 @@
   max-width: var(--max-width);
   margin: 0 auto;
 
+  .aboutText {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+
+  .aboutRule {
+    width: 100%;
+    height: 0.5px;
+    background: #E0E0E0;
+    margin-bottom: 48px;
+  }
+
   .aboutGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 48px;
 
     @media (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
@@ -15,79 +30,36 @@
 
     @media (max-width: 500px) {
       grid-template-columns: 1fr;
+      gap: 24px;
     }
 
-    .aboutCardMain {
-      grid-column: span 3;
+    .aboutDetail {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
 
-      @media (max-width: 900px) {
-        grid-column: span 2;
-      }
-      @media (max-width: 500px) {
-        grid-column: span 1;
-      }
-
-      .cardOuter {
-        border-radius: 1.5rem;
-        height: 100%;
-      }
-
-      .cardInner {
-        border-radius: calc(1.5rem - 1px);
-        padding: 36px;
-        height: 100%;
-      }
-
-      .aboutBio {
-        font-size: 1rem;
-        line-height: 1.85;
-        color: var(--text-secondary);
-        font-weight: 400;
-        text-wrap: pretty;
-      }
-    }
-
-    .aboutCard {
-      .cardOuter {
-        border-radius: 1.5rem;
-        height: 100%;
-        transition: all 0.55s var(--ease-spring);
-
-        &:hover {
-          transform: translateY(-3px);
-          border-color: var(--border-medium);
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-      }
-
-      .cardInner {
-        border-radius: calc(1.5rem - 1px);
-        padding: 22px 24px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        transition: background 0.55s var(--ease-spring);
-      }
-
-      &:hover .cardInner {
-        background: var(--bg-card-hover);
-      }
-
-      .aboutCardLabel {
+      .aboutDetailLabel {
         font-size: 0.625rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.14em;
         color: var(--text-tertiary);
-        font-family: "Plus Jakarta Sans", sans-serif;
       }
 
-      .aboutCardValue {
-        font-size: 0.875rem;
+      .aboutDetailValue {
+        font-size: 0.9375rem;
         color: var(--text-primary);
-        font-weight: 500;
+        font-weight: 400;
         word-break: break-word;
+        line-height: 1.6;
+
+        a {
+          transition: color var(--ease-fast);
+
+          &:hover {
+            color: var(--accent);
+          }
+        }
       }
     }
   }

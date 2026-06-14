@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 const experiences = [
   {
@@ -51,68 +51,49 @@ const experiences = [
 ];
 
 const Experience = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.querySelectorAll(".reveal").forEach((r) => r.classList.add("visible"));
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className="experienceContainer" id="experience" ref={sectionRef}>
-      <p className="reveal reveal-delay-1 section-label">Career</p>
-      <h2 className="reveal reveal-delay-2 section-title">Experience</h2>
-      <p className="reveal reveal-delay-2 section-subtitle">
+    <section className="experienceContainer" id="experience">
+      <p className="section-label">Career</p>
+      <h2 className="section-title">Experience</h2>
+      <p className="section-subtitle">
         Building enterprise software and e-commerce platforms for Germany's leading companies.
       </p>
       <div className="expTimeline">
-        {experiences.map((exp, i) => (
-          <div key={exp.company} className={`expEntry reveal reveal-delay-${Math.min(i + 3, 5)}`}>
+        {experiences.map((exp) => (
+          <div key={exp.company} className="expEntry">
             <div className="expMarkerLine">
               <div className="expDot" />
               <div className="expLine" />
             </div>
-            <div className="expCardShell bezel-outer">
-              <div className="expCard bezel-inner">
-                <div className="expHeader">
-                  <div className="expHeaderLeft">
-                    {exp.companyUrl ? (
-                      <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="expCompany">{exp.company}</a>
-                    ) : (
-                      <span className="expCompany">{exp.company}</span>
-                    )}
-                    <span className="expLocation">{exp.location}</span>
-                  </div>
-                  <span className="expPeriod">{exp.period}</span>
+            <div className="expContent">
+              <div className="expHeader">
+                <div className="expHeaderLeft">
+                  {exp.companyUrl ? (
+                    <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="expCompany">{exp.company}</a>
+                  ) : (
+                    <span className="expCompany">{exp.company}</span>
+                  )}
+                  <span className="expLocation">{exp.location}</span>
                 </div>
-                <h3 className="expRole">{exp.role}</h3>
-                <p className="expDesc">{exp.description}</p>
-                <ul className="expHighlights">
-                  {exp.highlights.map((h, j) => (
-                    <li key={j}>{h}</li>
-                  ))}
-                </ul>
-                {exp.projects.length > 0 && (
-                  <div className="expProjects">
-                    {exp.projects.map((p) => (
-                      <div key={p.name} className="expProjectPill">
-                        <span className="expProjectName">{p.name}</span>
-                        <span className="expProjectDesc">{p.desc}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                <span className="expPeriod">{exp.period}</span>
               </div>
+              <h3 className="expRole">{exp.role}</h3>
+              <p className="expDesc">{exp.description}</p>
+              <ul className="expHighlights">
+                {exp.highlights.map((h, j) => (
+                  <li key={j}>{h}</li>
+                ))}
+              </ul>
+              {exp.projects.length > 0 && (
+                <div className="expProjects">
+                  {exp.projects.map((p) => (
+                    <div key={p.name} className="expProject">
+                      <span className="expProjectName">{p.name}</span>
+                      <span className="expProjectDesc">{p.desc}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}
