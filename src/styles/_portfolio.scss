@@ -5,11 +5,11 @@
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: 32px;
+    margin-top: 36px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -19,7 +19,7 @@
 
     .projectCard {
       position: relative;
-      border-radius: 14px;
+      border-radius: 1.5rem;
       overflow: hidden;
       text-decoration: none;
       transition: all 0.55s var(--ease-spring);
@@ -33,41 +33,49 @@
 
       &.featured {
         grid-column: span 2;
-        grid-row: span 2;
+        grid-row: span 1;
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
           grid-column: span 1;
           grid-row: span 1;
         }
       }
 
       &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-4px);
+        box-shadow: 0 20px 56px rgba(0, 0, 0, 0.4);
+        border-color: var(--border-medium);
 
         .projectContent {
-          background: var(--color-bg-card-hover);
+          background: var(--bg-card-hover);
+        }
+
+        .projectTop {
+          .projectAccent {
+            width: 48px;
+          }
         }
       }
 
       .projectContent {
-        padding: 28px;
+        padding: 32px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex: 1;
         position: relative;
         z-index: 1;
-        border-radius: 10px;
-        min-height: 200px;
+        border-radius: calc(1.5rem - 1px);
+        min-height: 220px;
         transition: background 0.55s var(--ease-spring);
 
         @media (max-width: 768px) {
-          padding: 22px;
+          padding: 24px;
         }
       }
 
       &.featured .projectContent {
-        min-height: 340px;
+        min-height: 280px;
       }
 
       .projectTop {
@@ -80,14 +88,32 @@
         width: 36px;
         height: 3px;
         border-radius: 2px;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
+        transition: width 0.55s var(--ease-spring);
 
-        &.accent-amber { background: linear-gradient(90deg, var(--color-accent), #6BA07A); }
-        &.accent-purple { background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent-2-hover)); }
-        &.accent-green { background: linear-gradient(90deg, #5B8C51, #7DB573); }
-        &.accent-slate { background: linear-gradient(90deg, #8B8883, #B5B2AD); }
-        &.accent-rose { background: linear-gradient(90deg, #C47A5A, #D49A7E); }
-        &.accent-blue { background: linear-gradient(90deg, #5E7F9C, #7DA0BD); }
+        &.accent-amber {
+          background: linear-gradient(90deg, var(--accent-primary), #7CFFC4);
+          box-shadow: 0 0 10px rgba(0, 229, 153, 0.2);
+        }
+        &.accent-purple {
+          background: linear-gradient(90deg, var(--accent-secondary), #C084FC);
+          box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+        }
+        &.accent-green {
+          background: linear-gradient(90deg, var(--accent-primary), var(--accent-primary-hover));
+          box-shadow: 0 0 10px rgba(0, 229, 153, 0.2);
+        }
+        &.accent-slate {
+          background: linear-gradient(90deg, var(--text-tertiary), var(--text-secondary));
+        }
+        &.accent-rose {
+          background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+          box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+        }
+        &.accent-blue {
+          background: linear-gradient(90deg, #60A5FA, #93C5FD);
+          box-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
+        }
       }
 
       .projectLinks {
@@ -97,40 +123,40 @@
         flex-shrink: 0;
 
         .projectSourceLink {
-          width: 36px;
-          height: 36px;
+          width: 38px;
+          height: 38px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 0, 0, 0.03);
-          border: 1px solid rgba(0, 0, 0, 0.05);
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border-subtle);
           transition: all 0.55s var(--ease-spring);
           opacity: 0;
           transform: translateX(-8px);
-          color: var(--color-text-secondary);
+          color: var(--text-secondary);
           text-decoration: none;
 
           svg {
-            width: 15px;
-            height: 15px;
+            width: 16px;
+            height: 16px;
           }
 
           &:hover {
-            background: rgba(0, 0, 0, 0.06);
-            color: var(--color-text);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
           }
         }
 
         .projectArrowCircle {
-          width: 36px;
-          height: 36px;
+          width: 38px;
+          height: 38px;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 0, 0, 0.03);
-          border: 1px solid rgba(0, 0, 0, 0.05);
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border-subtle);
           transition: all 0.55s var(--ease-spring);
           flex-shrink: 0;
           opacity: 0;
@@ -139,7 +165,7 @@
           svg {
             width: 14px;
             height: 14px;
-            color: var(--color-text-secondary);
+            color: var(--text-secondary);
           }
         }
       }
@@ -155,23 +181,23 @@
       }
 
       .projectTitle {
-        font-size: 1.25rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.3rem;
         font-weight: 700;
-        margin-bottom: 8px;
-        letter-spacing: -0.02em;
-        color: var(--color-text);
-        font-family: "Syne", sans-serif;
+        margin-bottom: 10px;
+        letter-spacing: -0.03em;
+        color: var(--text-primary);
       }
 
       .projectDescription {
         font-size: 0.85rem;
-        line-height: 1.6;
-        color: var(--color-text-secondary);
+        line-height: 1.65;
+        color: var(--text-secondary);
         font-weight: 400;
       }
 
       &.featured .projectTitle {
-        font-size: 1.65rem;
+        font-size: 1.7rem;
       }
 
       &.featured .projectDescription {

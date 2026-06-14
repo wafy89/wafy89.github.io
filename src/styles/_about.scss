@@ -5,45 +5,43 @@
 
   .aboutGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 14px;
-    margin-top: 32px;
+    margin-top: 36px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 500px) {
       grid-template-columns: 1fr;
     }
 
     .aboutCardMain {
-      grid-column: span 2;
+      grid-column: span 3;
 
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         grid-column: span 2;
       }
-
-      @media (max-width: 480px) {
+      @media (max-width: 500px) {
         grid-column: span 1;
       }
 
       .cardOuter {
-        border-radius: 14px;
+        border-radius: 1.5rem;
         height: 100%;
       }
 
       .cardInner {
-        border-radius: 10px;
-        padding: 28px;
+        border-radius: calc(1.5rem - 1px);
+        padding: 36px;
         height: 100%;
       }
 
       .aboutBio {
-        font-size: 0.95rem;
-        line-height: 1.8;
-        color: var(--color-text-secondary);
+        font-size: 1rem;
+        line-height: 1.85;
+        color: var(--text-secondary);
         font-weight: 400;
         text-wrap: pretty;
       }
@@ -51,43 +49,45 @@
 
     .aboutCard {
       .cardOuter {
-        border-radius: 14px;
+        border-radius: 1.5rem;
         height: 100%;
         transition: all 0.55s var(--ease-spring);
 
         &:hover {
-          transform: translateY(-2px);
-          border-color: var(--color-border-hover);
+          transform: translateY(-3px);
+          border-color: var(--border-medium);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
       }
 
       .cardInner {
-        border-radius: 10px;
-        padding: 20px 22px;
+        border-radius: calc(1.5rem - 1px);
+        padding: 22px 24px;
         height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: 6px;
         transition: background 0.55s var(--ease-spring);
       }
 
       &:hover .cardInner {
-        background: var(--color-bg-card-hover);
+        background: var(--bg-card-hover);
       }
 
       .aboutCardLabel {
         font-size: 0.625rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: var(--color-text-tertiary);
+        letter-spacing: 0.14em;
+        color: var(--text-tertiary);
         font-family: "Plus Jakarta Sans", sans-serif;
       }
 
       .aboutCardValue {
         font-size: 0.875rem;
-        color: var(--color-text);
+        color: var(--text-primary);
         font-weight: 500;
+        word-break: break-word;
       }
     }
   }

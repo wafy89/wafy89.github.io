@@ -5,11 +5,11 @@
 
   .skillsGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    margin-top: 32px;
+    margin-top: 36px;
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -22,69 +22,90 @@
 
       &.featured {
         grid-column: span 2;
+        grid-row: span 1;
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
           grid-column: span 2;
         }
-
         @media (max-width: 600px) {
           grid-column: span 1;
+        }
+
+        .skillList {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px 24px;
+
+          @media (max-width: 500px) {
+            grid-template-columns: 1fr;
+          }
         }
       }
 
       .cardOuter {
-        border-radius: 14px;
+        border-radius: 1.5rem;
         height: 100%;
         transition: all 0.55s var(--ease-spring);
 
         &:hover {
-          transform: translateY(-2px);
-          border-color: var(--color-border-hover);
+          transform: translateY(-3px);
+          border-color: var(--border-medium);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
       }
 
       .cardInner {
-        border-radius: 10px;
-        padding: 28px;
+        border-radius: calc(1.5rem - 1px);
+        padding: 32px;
         height: 100%;
         transition: background 0.55s var(--ease-spring);
       }
 
       &:hover .cardInner {
-        background: var(--color-bg-card-hover);
+        background: var(--bg-card-hover);
       }
 
       .skillCatAccent {
-        width: 36px;
+        width: 40px;
         height: 3px;
         border-radius: 2px;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
 
-        &.accent-amber { background: linear-gradient(90deg, var(--color-accent), #6BA07A); }
-        &.accent-purple { background: linear-gradient(90deg, var(--color-accent-2), var(--color-accent-2-hover)); }
-        &.accent-green { background: linear-gradient(90deg, #5B8C51, #7DB573); }
-        &.accent-slate { background: linear-gradient(90deg, #8B8883, #B5B2AD); }
-        &.accent-rose { background: linear-gradient(90deg, #C47A5A, #D49A7E); }
+        &.accent-amber {
+          background: linear-gradient(90deg, var(--accent-primary), #7CFFC4);
+        }
+        &.accent-purple {
+          background: linear-gradient(90deg, var(--accent-secondary), #C084FC);
+        }
+        &.accent-green {
+          background: linear-gradient(90deg, var(--accent-primary), var(--accent-primary-hover));
+        }
+        &.accent-slate {
+          background: linear-gradient(90deg, var(--text-tertiary), var(--text-secondary));
+        }
+        &.accent-rose {
+          background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+        }
       }
 
       .skillCatTitle {
-        font-family: "Syne", sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 1.15rem;
         font-weight: 700;
-        color: var(--color-text);
-        margin-bottom: 20px;
-        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        margin-bottom: 22px;
+        letter-spacing: -0.03em;
       }
 
       .skillList {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 14px;
 
         .skillItem {
           display: flex;
           flex-direction: column;
-          gap: 6px;
+          gap: 7px;
 
           .skillItemHeader {
             display: flex;
@@ -93,14 +114,14 @@
 
             .skillItemName {
               font-size: 0.8125rem;
-              color: var(--color-text-secondary);
+              color: var(--text-secondary);
               font-weight: 500;
             }
 
             .skillItemLevel {
               font-family: "JetBrains Mono", "SF Mono", monospace;
               font-size: 0.6875rem;
-              color: var(--color-text-tertiary);
+              color: var(--text-tertiary);
               font-weight: 500;
             }
           }
@@ -108,16 +129,17 @@
           .skillBarOuter {
             width: 100%;
             height: 3px;
-            background: rgba(0, 0, 0, 0.04);
+            background: rgba(255, 255, 255, 0.04);
             border-radius: 2px;
             overflow: hidden;
 
             .skillBarInner {
               height: 100%;
               border-radius: 2px;
-              background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+              background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
               width: 0;
-              transition: width 1.4s var(--ease-smooth);
+              transition: width 1.5s var(--ease-smooth);
+              box-shadow: 0 0 8px rgba(0, 229, 153, 0.15);
 
               &.animate {
                 width: var(--skill-level);

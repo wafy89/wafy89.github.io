@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    margin-top: 32px;
+    margin-top: 36px;
 
     @media (max-width: 900px) {
       grid-template-columns: repeat(2, 1fr);
@@ -29,22 +29,29 @@
         @media (max-width: 600px) {
           grid-column: span 1;
         }
+
+        .cardInner {
+          background: linear-gradient(135deg, rgba(0, 229, 153, 0.04) 0%, rgba(139, 92, 246, 0.04) 100%);
+          border: 1px solid rgba(0, 229, 153, 0.08);
+          border-radius: calc(1.5rem - 1px);
+        }
       }
 
       .cardOuter {
-        border-radius: 14px;
+        border-radius: 1.5rem;
         height: 100%;
         transition: all 0.55s var(--ease-spring);
 
         &:hover {
-          transform: translateY(-2px);
-          border-color: var(--color-border-hover);
+          transform: translateY(-3px);
+          border-color: var(--border-medium);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
       }
 
       .cardInner {
-        border-radius: 10px;
-        padding: 28px;
+        border-radius: calc(1.5rem - 1px);
+        padding: 30px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -52,54 +59,55 @@
       }
 
       &:hover .cardInner {
-        background: var(--color-bg-card-hover);
+        background: var(--bg-card-hover);
       }
 
       .eduHeader {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
 
         .eduYear {
           font-family: "JetBrains Mono", "SF Mono", monospace;
           font-size: 0.75rem;
           font-weight: 600;
-          color: var(--color-accent);
-          letter-spacing: 0.05em;
+          color: var(--accent-primary);
+          letter-spacing: 0.06em;
         }
 
         .eduHours {
           font-family: "JetBrains Mono", "SF Mono", monospace;
           font-size: 0.625rem;
-          color: var(--color-text-tertiary);
-          letter-spacing: 0.04em;
-          background: var(--color-bg-elevated);
-          padding: 3px 10px;
-          border-radius: 50px;
-          border: 1px solid var(--color-border);
+          color: var(--text-tertiary);
+          letter-spacing: 0.05em;
+          background: rgba(255, 255, 255, 0.04);
+          padding: 4px 12px;
+          border-radius: 9999px;
+          border: 1px solid var(--border-subtle);
         }
       }
 
       .eduDegree {
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-weight: 700;
-        color: var(--color-text);
-        margin-bottom: 6px;
-        letter-spacing: -0.02em;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+        letter-spacing: -0.03em;
         line-height: 1.35;
+        font-family: "Space Grotesk", sans-serif;
       }
 
       .eduSchool {
         font-size: 0.8125rem;
-        color: var(--color-accent-2);
+        color: var(--accent-secondary);
         font-weight: 500;
-        margin-bottom: 12px;
+        margin-bottom: 14px;
       }
 
       .eduFocus {
         font-size: 0.8125rem;
-        color: var(--color-text-secondary);
+        color: var(--text-secondary);
         line-height: 1.65;
         font-weight: 400;
         margin-top: auto;
@@ -111,27 +119,27 @@
     margin-top: 24px;
 
     .strengthsShell {
-      border-radius: 14px;
+      border-radius: 1.5rem;
       transition: all 0.55s var(--ease-spring);
 
       &:hover {
-        border-color: var(--color-border-hover);
+        border-color: var(--border-medium);
       }
     }
 
     .strengthsInner {
-      border-radius: 10px;
-      padding: 28px;
+      border-radius: calc(1.5rem - 1px);
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 20px;
 
       .strengthsTitle {
-        font-family: "Syne", sans-serif;
-        font-size: 0.95rem;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
         font-weight: 700;
-        color: var(--color-text);
-        letter-spacing: -0.01em;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
       }
 
       .strengthsList {
@@ -142,17 +150,17 @@
         .strengthPill {
           font-size: 0.8rem;
           font-weight: 500;
-          color: var(--color-text-secondary);
-          background: var(--color-bg-elevated);
-          border: 1px solid var(--color-border);
-          padding: 8px 18px;
-          border-radius: 50px;
+          color: var(--text-secondary);
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid var(--border-subtle);
+          padding: 9px 20px;
+          border-radius: 9999px;
           transition: all 0.45s var(--ease-spring);
 
           &:hover {
-            border-color: var(--color-border-hover);
-            background: var(--color-bg-card-hover);
-            color: var(--color-text);
+            border-color: var(--border-medium);
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
           }
         }
       }
