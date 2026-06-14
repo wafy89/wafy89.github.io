@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.de65b4af.css",
-    "main.js": "/static/js/main.01968ea5.js",
+    "main.css": "/static/css/main.e1d7a14f.css",
+    "main.js": "/static/js/main.e9243d32.js",
     "static/media/wafi3.jpg": "/static/media/wafi3.784e2baf5d07ba76aa9e.jpg",
-    "static/media/about_shap_bg.png": "/static/media/about_shap_bg.52ae40f199716672e866.png",
-    "static/media/logo4.png": "/static/media/logo4.03e7d555c1e0f55e0969.png",
+    "static/media/logo4.png": "/static/media/logo4.41c4ff250542036b898b.png",
     "index.html": "/index.html",
-    "main.de65b4af.css.map": "/static/css/main.de65b4af.css.map",
-    "main.01968ea5.js.map": "/static/js/main.01968ea5.js.map"
+    "main.e1d7a14f.css.map": "/static/css/main.e1d7a14f.css.map",
+    "main.e9243d32.js.map": "/static/js/main.e9243d32.js.map"
   },
   "entrypoints": [
-    "static/css/main.de65b4af.css",
-    "static/js/main.01968ea5.js"
+    "static/css/main.e1d7a14f.css",
+    "static/js/main.e9243d32.js"
   ]
 }
