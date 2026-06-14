@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import logo from "../assists/logo4.png";
 
 const NavBar = () => {
   const [extend, setExtend] = useState(false);
@@ -25,8 +24,11 @@ const NavBar = () => {
   return (
     <nav className="navContainer">
       <div className="logoContainer">
-        <a href="#home" onClick={handleNavClick}>
-          <img className="logoImage" src={logo} alt="Wafi Amer" />
+        <a href="#home" onClick={handleNavClick} className="logoLink">
+          <div className="logoMark">
+            <span>&lt;/&gt;</span>
+          </div>
+          <span className="logoName">WAFI</span>
         </a>
       </div>
       <div className={`navigation${extend ? " extend" : ""}`}>

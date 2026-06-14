@@ -1,5 +1,5 @@
 import React from "react";
-import myImg from "../assists/wafi3.jpg";
+import myImg from "../assists/wafi.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Home = () => {
@@ -41,6 +41,13 @@ const Home = () => {
         </div>
       </div>
       <div className="homeImage">
+        <div className="homePoster">
+          <span>Idea</span>
+          <span className="posterPipe">|</span>
+          <span>Plan</span>
+          <span className="posterPipe">|</span>
+          <span>Build</span>
+        </div>
         <img src={myImg} alt="Wafi Amer" />
       </div>
     </section>

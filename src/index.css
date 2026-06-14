@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -12,7 +14,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "SF Pro Display", "SF Pro Text", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "SF Pro Display", "SF Pro Text", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-weight: 300;
   color: #0A0A0A;
 }

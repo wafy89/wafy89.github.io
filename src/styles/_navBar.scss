@@ -21,14 +21,36 @@
     display: flex;
     align-items: center;
 
-    .logoImage {
-      height: 20px;
-      width: auto;
-      opacity: 0.85;
-      transition: opacity var(--ease-fast);
+    .logoLink {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
 
-      &:hover {
-        opacity: 1;
+      .logoMark {
+        width: 32px;
+        height: 32px;
+        background: #0A0A0A;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          font-family: "SF Mono", "JetBrains Mono", "Fira Code", monospace;
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: #FFFFFF;
+          letter-spacing: -0.04em;
+          line-height: 1;
+        }
+      }
+
+      .logoName {
+        font-family: "Archivo", sans-serif;
+        font-size: 1.05rem;
+        font-weight: 400;
+        color: #0A0A0A;
+        letter-spacing: 0.12em;
       }
     }
   }

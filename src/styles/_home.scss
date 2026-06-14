@@ -1,49 +1,104 @@
 .homeContainer {
   min-height: 100dvh;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--section-padding);
-  padding-top: calc(64px + 80px);
-  max-width: var(--max-width);
-  margin: 0 auto;
+  padding: 0;
+  padding-top: 64px;
   position: relative;
-  gap: 80px;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: calc(56px + 60px);
-    padding-bottom: 80px;
-    gap: 48px;
+    padding-top: 0;
   }
 
   .homeImage {
-    flex-shrink: 0;
-    order: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 0;
+
+    @media (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      height: 45vh;
+    }
 
     img {
-      width: 380px;
-      height: 520px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      object-position: center 15%;
       filter: grayscale(100%);
-      border: 1px solid #E0E0E0;
       display: block;
+    }
+  }
 
-      @media (max-width: 768px) {
-        width: 100%;
-        height: 360px;
+  .homePoster {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    z-index: 2;
+    pointer-events: none;
+
+    span {
+      font-family: "Archivo", sans-serif;
+      font-weight: 100;
+      font-size: clamp(2rem, 4.5vw, 6rem);
+      letter-spacing: -0.02em;
+      line-height: 0.85;
+      color: white;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    .posterPipe {
+      color: var(--accent);
+      font-size: clamp(2rem, 4.5vw, 6rem);
+      font-weight: 300;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .homePoster {
+      padding-left: 12px;
+      gap: 8px;
+
+      span {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+      }
+
+      .posterPipe {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
       }
     }
   }
 
   .homeTextContainer {
     max-width: 560px;
-    order: 1;
+    padding: 120px 0 120px 80px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      padding: 60px 24px 80px;
+      max-width: none;
+    }
 
     h1 {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-family: "Archivo", sans-serif;
       font-size: clamp(3.5rem, 9vw, 6rem);
       font-weight: 200;
       line-height: 0.92;
@@ -131,7 +186,7 @@
   padding: 14px 28px;
   font-size: 0.8125rem;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family: "Archivo", sans-serif;
   letter-spacing: 0.04em;
   border: 1px solid #0A0A0A;
   background: #FFFFFF;
@@ -154,7 +209,7 @@
   padding: 14px 28px;
   font-size: 0.8125rem;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family: "Archivo", sans-serif;
   letter-spacing: 0.04em;
   border: 1px solid #D0D0D0;
   background: transparent;

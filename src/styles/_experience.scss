@@ -57,6 +57,10 @@
           flex-wrap: wrap;
           gap: 8px;
 
+          @media (max-width: 600px) {
+            flex-direction: column;
+          }
+
           .expHeaderLeft {
             display: flex;
             align-items: center;
@@ -72,8 +76,8 @@
             text-decoration: none;
             transition: color var(--ease-fast);
 
-            &[href]:hover {
-              color: var(--accent);
+            &:hover, &:visited {
+              color: var(--text-primary);
             }
           }
 
