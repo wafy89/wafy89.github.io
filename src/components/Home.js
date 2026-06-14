@@ -109,15 +109,8 @@ const Home = () => {
         </div>
       </div>
       <div className="homeImage reveal reveal-delay-3">
-        <div className="imageShell">
-          <div className="imageFrameOuter">
-            <div className="imageFrameInner">
-              <div className="imagePortrait">
-                <img src={myImg} alt="Wafi Amer" />
-              </div>
-            </div>
-          </div>
-          <div className="imageGlow" />
+        <div className="homeImageBg" style={{ backgroundImage: `url(${myImg})` }}>
+          <div className="homeImageOverlay" />
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ const experiences = [
   {
     role: "Full-Stack Developer",
     company: "Avision GmbH",
+    companyUrl: "https://www.avision-it.de/",
     location: "Remote / Munich",
     period: "Apr. 2023 – Sep. 2025",
     description:
@@ -26,6 +27,7 @@ const experiences = [
   {
     role: "Frontend Developer",
     company: "Relaxdays GmbH",
+    companyUrl: "https://relaxdays.de/",
     location: "Leipzig",
     period: "Apr. 2021 – Mar. 2023",
     description:
@@ -84,7 +86,11 @@ const Experience = () => {
               <div className="expCard bezel-inner">
                 <div className="expHeader">
                   <div className="expHeaderLeft">
-                    <span className="expCompany">{exp.company}</span>
+                    {exp.companyUrl ? (
+                      <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="expCompany">{exp.company}</a>
+                    ) : (
+                      <span className="expCompany">{exp.company}</span>
+                    )}
                     <span className="expLocation">{exp.location}</span>
                   </div>
                   <span className="expPeriod">{exp.period}</span>

@@ -8,6 +8,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
   gap: 80px;
 
   @media (max-width: 900px) {
@@ -20,6 +21,8 @@
   .homeTextContainer {
     flex: 1;
     max-width: 580px;
+    position: relative;
+    z-index: 1;
 
     .homeEyebrow {
       margin-bottom: 16px;
@@ -158,99 +161,45 @@
   }
 
   .homeImage {
-    flex-shrink: 0;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    z-index: 0;
 
-    .imageShell {
-      width: 400px;
+    @media (max-width: 900px) {
       position: relative;
-
-      @media (max-width: 900px) {
-        width: min(320px, 82vw);
-      }
-    }
-
-    .imageGlow {
-      position: absolute;
-      inset: -70px -50px -30px -30px;
-      background:
-        radial-gradient(ellipse at 60% 30%, var(--color-accent-glow) 0%, transparent 50%),
-        radial-gradient(ellipse at 20% 80%, var(--color-accent-2-glow) 0%, transparent 40%);
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.85;
-
-      @media (max-width: 900px) {
-        inset: -40px -20px -20px -15px;
-        opacity: 0.6;
-      }
-    }
-
-    .imageFrameOuter {
-      position: relative;
-      z-index: 1;
-      border-radius: 16px;
-      background: transparent;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      padding: 0;
-      box-shadow: none;
-      transition:
-        transform 0.8s var(--ease-spring),
-        border-color 0.8s var(--ease-spring);
-
-      &:hover {
-        transform: translateY(-4px);
-        border-color: rgba(0, 0, 0, 0.12);
-      }
-    }
-
-    .imageFrameInner {
-      border-radius: 12px;
-      background: var(--color-bg-alt);
-      border: none;
-      box-shadow: none;
-      overflow: hidden;
-    }
-
-    .imagePortrait {
       width: 100%;
-      aspect-ratio: 3 / 4;
+      height: 50vh;
+    }
+
+    .homeImageBg {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
       position: relative;
-      overflow: hidden;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transition:
-          transform 1.1s var(--ease-spring),
-          filter 1.1s var(--ease-spring);
-      }
+    .homeImageOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to left,
+        transparent 0%,
+        rgba(250, 249, 247, 0) 30%,
+        var(--color-bg) 100%
+      );
 
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
+      @media (max-width: 900px) {
         background: linear-gradient(
           to top,
-          var(--color-bg) 0%,
-          rgba(250, 249, 247, 0.55) 18%,
-          transparent 45%
+          transparent 0%,
+          rgba(250, 249, 247, 0) 30%,
+          var(--color-bg) 100%
         );
-        pointer-events: none;
-        transition: opacity 0.8s var(--ease-spring);
-      }
-
-      &:hover {
-        img {
-          transform: scale(1.04);
-          filter: brightness(1.05);
-        }
-
-        &::after {
-          opacity: 0.7;
-        }
       }
     }
   }
