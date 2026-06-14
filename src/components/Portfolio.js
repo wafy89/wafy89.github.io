@@ -5,7 +5,6 @@ const projects = [
     title: "LexAI — Legal Assistant",
     description: "AI-powered legal document assistant. Python, FastAPI, LangChain, deployed on Render.",
     url: "https://laxai.onrender.com/",
-    sourceUrl: "https://github.com/wafy89/laxAI",
     accent: "accent-amber",
     featured: true,
   },
